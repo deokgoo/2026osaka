@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 오사카·교토 4박 5일 미식 & 힐링 가이드</title>
+  <meta name="description" content="2026년 10월 31일 ~ 11월 4일 오사카·교토 4박 5일 여행 일정, 5대 미식 맛집, 라피트/게이한 교통 가이드, 예산 계산기, 체크리스트">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="2026 오사카·교토 4박 5일 미식 & 힐링 가이드">
+  <meta property="og:description" content="오사카 미식 탐방 및 교토 당일치기 완벽 일정표와 인터랙티브 예산 계산기">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              pink: '#f43f5e',
+              rose: '#e11d48',
+              cyan: '#06b6d4',
+              gold: '#f59e0b',
+              dark: '#070913',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="text-slate-100 antialiased selection:bg-pink-500 selection:text-white">
+
+  <!-- 1. Header & Navigation -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white shadow-lg shadow-pink-500/20">
+          <i data-lucide="plane" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <a href="#" class="font-display font-black text-lg md:text-xl tracking-tight text-white flex items-center gap-1.5">
+            <span>OSAKA</span>
+            <span class="text-pink-500 font-extrabold">&</span>
+            <span>KYOTO</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-400 border border-pink-500/30 ml-1">2026</span>
+          </a>
+          <p class="text-[10px] text-slate-400 hidden sm:block">4박 5일 미식 & 힐링 가이드</p>
+        </div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-300">
+        <a href="#itinerary" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-4 h-4 text-pink-400"></i>
+          <span>일정표</span>
+        </a>
+        <a href="#gourmet" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="utensils" class="w-4 h-4 text-amber-400"></i>
+          <span>5대 미식</span>
+        </a>
+        <a href="#transit" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="train" class="w-4 h-4 text-cyan-400"></i>
+          <span>교통 & 패스</span>
+        </a>
+        <a href="#calculator" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="calculator" class="w-4 h-4 text-emerald-400"></i>
+          <span>예산 계산기</span>
+        </a>
+        <a href="#checklist" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="check-square" class="w-4 h-4 text-purple-400"></i>
+          <span>체크리스트</span>
+        </a>
+      </nav>
+
+      <!-- D-Day Badge -->
+      <div id="dday-display" class="hidden sm:block">
+        <!-- Injected by JS -->
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="md:hidden hidden border-t border-slate-800 bg-slate-950/95 p-4 space-y-2">
+      <a href="#itinerary" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="calendar" class="w-4 h-4 text-pink-400"></i> 1~5일차 일정표
+      </a>
+      <a href="#gourmet" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="utensils" class="w-4 h-4 text-amber-400"></i> 5대 미식 & 맛집
+      </a>
+      <a href="#transit" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="train" class="w-4 h-4 text-cyan-400"></i> 교통 & 패스 가이드
+      </a>
+      <a href="#calculator" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="calculator" class="w-4 h-4 text-emerald-400"></i> 인터랙티브 예산 계산기
+      </a>
+      <a href="#checklist" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="check-square" class="w-4 h-4 text-purple-400"></i> 준비물 체크리스트
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+    <!-- 2. Hero Section -->
+    <section class="relative rounded-3xl overflow-hidden glass-panel border border-slate-800/80 p-8 md:p-12 lg:p-16">
+      <div class="absolute inset-0 bg-gradient-to-r from-rose-950/40 via-purple-950/30 to-slate-950/60 -z-10"></div>
+      <div class="absolute -right-20 -top-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700 text-xs text-pink-400 font-semibold shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-pink-500 animate-ping"></span>
+            <span>2026. 10. 31(토) ~ 11. 04(수) · 4박 5일</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+            미식과 정취의 도시,<br/>
+            <span class="gradient-text-pink">오사카</span> & <span class="gradient-text-cyan">교토</span> 가이드
+          </h1>
+
+          <p class="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
+            도톤보리 와규 야키니쿠부터 교토 숯불 장어덮밥, USJ 스마트 공략, 구로몬 시장과 고베규 테판야키까지. 
+            완벽하게 설계된 동선과 예산, 필수 팁을 한눈에 확인하세요.
+          </p>
+
+          <!-- Quick Travel Info Tags -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3">
+              <span class="text-[11px] text-slate-400 block">숙소 거점</span>
+              <span class="text-sm font-bold text-slate-200">난바 · 도톤보리</span>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3">
+              <span class="text-[11px] text-slate-400 block">핵심 미식</span>
+              <span class="text-sm font-bold text-pink-400">5대 미식 코스</span>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3">
+              <span class="text-[11px] text-slate-400 block">주요 명소</span>
+              <span class="text-sm font-bold text-cyan-400">청수사 & USJ</span>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3">
+              <span class="text-[11px] text-slate-400 block">공항 이동</span>
+              <span class="text-sm font-bold text-amber-400">라피트 특급열차</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countdown Card Widget -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-6 border border-pink-500/20 bg-slate-950/80 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1.5">
+                <i data-lucide="clock" class="w-4 h-4"></i> 출발 카운트다운
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026.10.31 16:35 KIX</span>
+            </div>
+
+            <div id="dday-detailed-timer">
+              <!-- Rendered by JS -->
+            </div>
+
+            <div class="pt-2 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+              <span class="flex items-center gap-1 text-slate-300">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-400"></i> 간사이 국제공항(KIX) 도착
+              </span>
+              <span class="font-mono text-cyan-400 font-semibold">16:35 수속</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 일자별 상세 일정표 Section -->
+    <section id="itinerary" class="space-y-6 scroll-mt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold text-pink-400 uppercase tracking-wider">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Detailed Itinerary</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">일자별 맞춤 타임라인</h2>
+          <p class="text-sm text-slate-400 mt-1">날짜를 클릭하여 시간대별 이동 동선, 미식, 꿀팁을 확인하세요.</p>
+        </div>
+
+        <!-- Day Selector Tabs -->
+        <div id="itinerary-day-tabs" class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- Timeline Content Container -->
+      <div id="itinerary-content-area" class="transition-all duration-300">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- 4. 5대 미식 & 맛집 마스터 가이드 Section -->
+    <section id="gourmet" class="space-y-6 scroll-mt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Gourmet Guide</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">오사카·교토 5대 핵심 미식</h2>
+          <p class="text-sm text-slate-400 mt-1">마츠사카 소고기부터 숯불 장어, 쿠시카츠, 와규 스키야키, 고베규 테판야키까지 엄선된 맛집 정보</p>
+        </div>
+      </div>
+
+      <div id="gourmet-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- 5. 교통 & 패스 완벽 가이드 Section -->
+    <section id="transit" class="space-y-6 scroll-mt-20">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 uppercase tracking-wider">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          <span>Transit & Passes</span>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">교통편 & 패스 가이드</h2>
+        <p class="text-sm text-slate-400 mt-1">라피트 특급, 게이한 전철, USJ 이동 및 시내 IC 카드 활용법</p>
+      </div>
+
+      <div id="transit-guide-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- 6. 인터랙티브 예산 계산기 Section -->
+    <section id="calculator" class="space-y-6 scroll-mt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            <span>Budget Simulator</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">여행 경비 & 환율 시뮬레이터</h2>
+          <p class="text-sm text-slate-400 mt-1">인원수와 환율을 조정하거나 항목별 예산을 직접 수정해보세요.</p>
+        </div>
+
+        <button id="calc-reset-btn" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors self-start md:self-auto flex items-center gap-1.5">
+          <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+          <span>기본값 리셋</span>
+        </button>
+      </div>
+
+      <!-- Controls & Summary Top Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- Settings Control Box -->
+        <div class="md:col-span-4 glass-card rounded-2xl p-6 border border-slate-800/80 bg-slate-900/60 space-y-4">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300">인원수 & 환율 설정</h3>
+          
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">여행 인원수</label>
+              <div class="flex items-center gap-2">
+                <input type="number" id="calc-travelers-count" min="1" max="20" value="2" class="w-full bg-slate-950 border border-slate-700 focus:border-cyan-500 rounded-xl px-4 py-2.5 text-white font-bold text-sm focus:outline-none" />
+                <span class="text-sm text-slate-400">명</span>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">적용 환율 (1 JPY = KRW)</label>
+              <div class="flex items-center gap-2">
+                <input type="number" id="calc-exchange-rate" step="0.05" min="5" max="20" value="9.15" class="w-full bg-slate-950 border border-slate-700 focus:border-cyan-500 rounded-xl px-4 py-2.5 text-white font-mono font-bold text-sm focus:outline-none" />
+                <span class="text-sm text-slate-400">원</span>
+              </div>
+              <span class="text-[11px] text-slate-500 block mt-1">※ 100엔 = 약 915원 기준</span>
+            </div>
+          </div>
+
+          <!-- Visual Breakdown -->
+          <div class="pt-4 border-t border-slate-800 space-y-3">
+            <h4 class="text-xs font-bold text-slate-400">카테고리별 비중</h4>
+            <div id="calc-category-breakdown" class="space-y-2.5">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Totals Display -->
+        <div class="md:col-span-8 glass-card rounded-2xl p-6 md:p-8 border border-emerald-500/30 bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950/20 flex flex-col justify-between space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Total Trip Cost -->
+            <div class="space-y-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">전체 여행 총 예상 비용</span>
+              <div id="calc-total-jpy" class="text-3xl sm:text-4xl font-black text-white font-mono">¥0</div>
+              <div id="calc-total-krw" class="text-lg font-bold text-emerald-400 font-mono">약 ₩0</div>
+            </div>
+
+            <!-- Per Person Cost -->
+            <div class="space-y-1 sm:border-l sm:border-slate-800 sm:pl-6">
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">1인당 분담 예상 비용</span>
+              <div id="calc-per-person-jpy" class="text-3xl sm:text-4xl font-black text-cyan-400 font-mono">¥0</div>
+              <div id="calc-per-person-krw" class="text-lg font-bold text-cyan-300 font-mono">약 ₩0</div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+            <i data-lucide="info" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+            <span>아래 표의 엔화(JPY) 금액을 직접 수정하면 총액과 원화 환산액이 실시간으로 재계산됩니다.</span>
+          </div>
+
+          <!-- Items Table -->
+          <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/60">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 bg-slate-900/80 text-[11px] uppercase tracking-wider text-slate-400 font-semibold">
+                  <th class="py-2.5 px-4">분류</th>
+                  <th class="py-2.5 px-4">항목</th>
+                  <th class="py-2.5 px-4 text-right">기본단가(엔)</th>
+                  <th class="py-2.5 px-4 text-right">총액(JPY)</th>
+                  <th class="py-2.5 px-4 text-right">환산(KRW)</th>
+                </tr>
+              </thead>
+              <tbody id="budget-items-tbody">
+                <!-- Injected by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 여행 준비물 체크리스트 Section -->
+    <section id="checklist" class="space-y-6 scroll-mt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold text-purple-400 uppercase tracking-wider">
+            <i data-lucide="check-square" class="w-4 h-4"></i>
+            <span>Preparation Checklist</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">여행 준비물 & 사전 체크리스트</h2>
+          <p class="text-sm text-slate-400 mt-1">체크한 내역은 브라우저에 자동 저장됩니다.</p>
+        </div>
+
+        <button id="checklist-reset-btn" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors self-start md:self-auto flex items-center gap-1.5">
+          <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+          <span>체크 상태 초기화</span>
+        </button>
+      </div>
+
+      <!-- Checklist Container -->
+      <div class="glass-card rounded-2xl p-6 md:p-8 border border-slate-800/80 bg-slate-900/60 space-y-6">
+        <!-- Progress Bar -->
+        <div class="space-y-2">
+          <div class="flex justify-between text-xs font-semibold">
+            <span class="text-slate-300">준비 진행률</span>
+            <span id="checklist-progress-text" class="text-pink-400 font-mono">0 / 0 완료 (0%)</span>
+          </div>
+          <div class="h-2.5 w-full bg-slate-950 rounded-full overflow-hidden p-0.5 border border-slate-800">
+            <div id="checklist-progress-bar" class="h-full bg-gradient-to-r from-pink-500 to-rose-500 rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div id="checklist-items-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 8. Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/80 mt-20 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+        <span class="text-slate-400 font-medium">2026 Osaka & Kyoto Gourmet Journey</span>
+      </div>
+      <p>© 2026 Osaka Trip Planner. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 9. Restaurant Detail Modal -->
+  <div id="restaurant-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-card rounded-3xl max-w-2xl w-full p-6 md:p-8 border border-slate-700 bg-slate-950 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <div id="restaurant-modal-content">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- App Main Scripts (ES Modules) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
