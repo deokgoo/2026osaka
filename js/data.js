@@ -71,113 +71,200 @@ export const ITINERARY_DAYS = [
   {
     day: 2,
     date: "11월 01일 (일)",
-    title: "고즈넉한 교토 당일치기 & 정갈한 미식",
-    theme: "기요미즈데라 · 기온 숯불 장어덮밥 · 카모강 · 쿠시카츠",
-    summary: "게이한 전철을 타고 천년 고도 교토로 떠납니다. 붉은 청수사와 전통 거리 산책, 나고야식 숯불 장어덮밥을 맛보고 난바로 복귀합니다.",
-    highlights: ["기요미즈데라(청수사)", "산넨자카·니넨자카", "키쿠카와 장어덮밥", "카모강 산책", "쿠시카츠 다루마"],
+    title: "붉은 도리이와 교토 미식 탐방 & 와규 스키야키",
+    theme: "후시미 이나리 · 청수사 · 규카츠 가츠규 · 은각사 · 쿄센도 말차 · 와규 스키야키",
+    summary: "게이한 전철로 여우신사의 붉은 도리이를 감상하고 청수사와 전통 거리, 규카츠와 은각사를 둘러본 뒤 난바로 돌아와 따뜻한 와규 스키야키로 피로를 풉니다.",
+    highlights: ["후시미 이나리(여우신사)", "기요미즈데라(청수사)", "교토가츠규 규카츠", "지쇼지(은각사) & 철학의 길", "쿄센도 말차 파르페", "치카라야마 와규 스키야키"],
     tips: [
-      "기요미즈데라는 10시 이후 관광객이 급증하므로 09:30경 일찍 입장하여 여유롭게 관람하세요.",
-      "오사카 요도야바시 ➔ 교토 기온시조 이동 시 '게이한 본선 특급(쾌속특급)'을 타면 환승 없이 48분 소요됩니다."
+      "게이한 전철 이용 시 요도야바시에서 탑승 후 후시미이나리역에 먼저 하차하여 센본도리이 초입을 여유롭게 감상하세요.",
+      "교토에서 하루 2만 보 가까이 걸은 후 난바로 돌아와 따뜻한 스키야키를 드시면 피로 해소에 최고입니다. 일요일 저녁이므로 18:30경으로 사전 예약해 두세요."
     ],
     timeline: [
       {
         time: "08:00 ~ 09:15",
-        title: "난바 ➔ 요도야바시 ➔ 교토 기온시조역 이동",
+        title: "난바 ➔ 요도야바시 ➔ 후시미 이나리역 이동",
         category: "transit",
-        desc: "난바역(미도스지선) ➔ 요도야바시역 환승 ➔ 게이한 본선 특급 탑승 ➔ 기온시조역 도착",
+        desc: "난바역(미도스지선) ➔ 요도야바시역 환승 ➔ 게이한 전철 탑승 ➔ 후시미이나리역 하차",
         badge: "전철 이동",
-        cost: "게이한 편도 430엔 + 지하철 190엔"
+        cost: "게이한 편도 410엔 + 지하철 190엔"
       },
       {
-        time: "09:30 ~ 12:00",
+        time: "09:15 ~ 10:15",
+        title: "후시미 이나리 신사 (여우신사) 관람",
+        category: "sightseeing",
+        desc: "끝없이 이어지는 붉은색 '센본도리이'에서 인생샷 남기기 (등산하지 말고 초입만 둘러보기)",
+        badge: "신사/포토존",
+        mapUrl: "https://maps.google.com/?cid=8870624639634301673",
+        tip: "아침 시간대에 방문해 인파가 덜 붐비는 붉은 도리이 길에서 사진 촬영"
+      },
+      {
+        time: "10:15 ~ 10:30",
+        title: "후시미이나리역 ➔ 기온시조역 이동",
+        category: "transit",
+        desc: "게이한 전철 탑승 후 5정거장 이동하여 기온시조역 도착 (약 10~15분 소요)",
+        badge: "전철 이동",
+        cost: "게이한 편도 220엔"
+      },
+      {
+        time: "10:30 ~ 12:00",
         title: "기요미즈데라(청수사) & 산넨자카·니넨자카",
         category: "sightseeing",
-        desc: "절벽 위에 지어진 웅장한 목조 본당과 오토와 폭포 관람 후, 아기자기한 전통 상점가 골목길 산책",
+        desc: "절벽 위에 세워진 웅장한 본당 무대 관람 후, 아기자기한 전통 상점가 골목길 산책",
         badge: "유네스코 세계유산",
         cost: "입장료 400엔",
-        mapUrl: "https://maps.google.com/?cid=11142562492576359146"
+        mapUrl: "https://maps.google.com/?cid=11142562492576359146",
+        tip: "후지나미(Fujinami)에서 쫀득한 와라비모찌와 갓 구운 당고 간식 맛보기"
       },
       {
-        time: "12:15 ~ 13:30",
-        title: "[점심] 우나기시로 키쿠카와 교토기온점",
-        category: "food",
-        desc: "90년 전통 나고야식 숯불 장어덮밥(히츠마부시 & 이치본주). 겉은 바삭하고 속은 부드러운 극상의 풍미",
-        badge: "미식 ★★★",
-        cost: "1인 약 4,500 ~ 6,500엔",
-        mapUrl: "https://maps.google.com/?cid=6205271270969705416",
-        restaurantId: "kikukawa-gion"
-      },
-      {
-        time: "14:00 ~ 16:30",
-        title: "카모강변 산책 & 하나미코지 & 말차 디저트",
+        time: "12:00 ~ 12:45",
+        title: "야사카 신사 & 마루야마 공원 산책 ➔ 산조 이동",
         category: "sightseeing",
-        desc: "교토의 정취가 살아있는 게이샤 거리 하나미코지와 평화로운 카모강 산책, 프리미엄 우지 말차 파르페 즐기기",
-        badge: "힐링/카페"
+        desc: "기온의 상징 야사카 신사와 녹음 짙은 마루야마 공원을 가로질러 점심 식당인 산조가와라마치 방면으로 도보 이동",
+        badge: "전통 산책",
+        tip: "교토 특유의 고즈넉한 골목 정취를 감상하며 산책"
+      },
+      {
+        time: "12:45 ~ 14:00",
+        title: "[점심] 규카츠 교토가츠규 산조가와라마치점",
+        category: "food",
+        desc: "겉은 바삭하고 속은 촉촉한 소고기 카츠의 정수! 부드러운 소고기 카츠를 1인 미니 화로에 살짝 구워 특제 소스 및 다시계란과 함께 즐기는 맛집",
+        badge: "미식 ★★★",
+        cost: "1인 약 2,500 ~ 3,500엔",
+        mapUrl: "https://www.google.com/maps/search/Gyukatsu+Kyoto+Katsugyu+Sanjo/",
+        restaurantId: "gyukatsu-katsugyu"
+      },
+      {
+        time: "14:00 ~ 14:30",
+        title: "산조 ➔ 지쇼지(은각사) 이동",
+        category: "transit",
+        desc: "산조가와라마치 정류장에서 시내버스(5번, 17번 등) 탑승 또는 택시로 은각사 이동",
+        badge: "버스/택시",
+        cost: "시내버스 230엔 / 택시 약 1,500엔"
+      },
+      {
+        time: "14:30 ~ 16:00",
+        title: "지쇼지(은각사) 및 철학의 길 산책",
+        category: "sightseeing",
+        desc: "고즈넉한 매력의 목조 누각과 은빛 모래 정원(향월대) 감상 후, 수로를 따라 아름다운 철학의 길 여유롭게 걷기",
+        badge: "명소/정원",
+        cost: "입장료 500엔",
+        mapUrl: "https://maps.google.com/?cid=2705196751698570185"
+      },
+      {
+        time: "16:00 ~ 17:00",
+        title: "[오후 디저트] 쿄센도(Kyosendo) 말차 카페",
+        category: "food",
+        desc: "교토역 방면으로 이동하며 고즈넉한 분위기의 전통 찻집에서 진한 말차 파르페와 고급스러운 녹차 디저트 휴식",
+        badge: "말차 디저트",
+        cost: "1인 약 1,200 ~ 1,800엔",
+        mapUrl: "https://maps.google.com/?cid=12526390419652057544"
       },
       {
         time: "17:00 ~ 18:15",
-        title: "교토 기온시조 ➔ 오사카 난바 복귀",
+        title: "교토역 주변 ➔ 오사카 난바 복귀",
         category: "transit",
-        desc: "게이한 특급 타고 요도야바시 경유 난바 귀환",
-        badge: "전철 이동"
+        desc: "JR 교토역 또는 게이한/지하철을 이용하여 난바로 쾌속 복귀",
+        badge: "전철 이동",
+        cost: "편도 약 600~800엔"
       },
       {
         time: "18:30 ~ 20:30",
-        title: "[저녁] 쿠시카츠 다루마 도톤보리점",
+        title: "[저녁] 와규 스키야키 치카라야마 오사카 난바 1호점",
         category: "food",
-        desc: "오사카의 소울푸드 바삭한 꼬치튀김과 시원한 나마비루(생맥주)! 소스 듬뿍 찍어 하루를 유쾌하게 마무리",
-        badge: "미식 ★★",
-        cost: "1인 약 2,500 ~ 4,000엔",
-        mapUrl: "https://maps.google.com/?cid=13204320496193831615",
-        restaurantId: "kushikatsu-daruma"
+        desc: "교토 도보 여행의 피로를 사르르 녹여주는 최고의 힐링 디너! 구글 평점 4.9점의 인생 스키야키에서 특제 타레 소스에 자작하게 익힌 최상급 와규를 신선한 계란에 찍어 즐깁니다.",
+        badge: "미식 ★★★",
+        cost: "1인 약 6,000 ~ 10,000엔",
+        mapUrl: "https://maps.google.com/?cid=15976576736448166063",
+        restaurantId: "sukiyaki-chikarayama"
       }
     ]
   },
   {
     day: 3,
     date: "11월 02일 (월)",
-    title: "유니버셜 스튜디오 재팬 (USJ) & 와규 스키야키",
-    theme: "USJ 오픈런 · 닌텐도 월드 · 해리포터 · 17시 스마트 퇴장 · 스키야키",
-    summary: "월요일 오픈런으로 USJ를 스마트하게 공략! 인기 테마파크를 집중 즐긴 후 호러나이트 전 17시에 퇴장해 난바에서 따뜻한 스키야키로 힐링합니다.",
-    highlights: ["슈퍼 닌텐도 월드", "위저딩 월드 오브 해리포터", "미니언즈/마리오 카트", "17시 조기퇴장으로 피로 최소화", "치카라야마 와규 스키야키"],
+    title: "유니버셜 스튜디오 재팬 (USJ) 초특급 오픈런 & 쿠시카츠",
+    theme: "06:15 출발 · 06:50 게이트 대기 · 07:15 조기개장 입장 · 닌텐도 월드 싱글라이더 · 생일 스티커 · 루이즈 피자 · 17시 퇴장 · 쿠시카츠",
+    summary: "11/3 일본 문화의 날 샌드위치 연휴 초극성수기 대응! 06:15 난바를 출발하여 07:15 조기 개장 게이트를 뚫고 닌텐도 월드 무확약권 직행, 싱글라이더와 생일 스티커로 하루를 완벽하게 공략합니다.",
+    highlights: [
+      "06:15 난바 출발 & 06:50 게이트 대기",
+      "07:15 조기 개장 즉시 입장",
+      "닌텐도 월드 무확약권 & 싱글라이더",
+      "생일 스티커 수령 & 크루 환호",
+      "11:00 루이즈 피자 조기 점심",
+      "17:00 호러나이트 전 스마트 퇴장",
+      "쿠시카츠 다루마 & 생맥주"
+    ],
     tips: [
-      "입장 즉시 USJ 공식 앱에서 '슈퍼 닌텐도 월드 e정리권(Area Timed Entry Ticket)'을 발권하세요.",
-      "저녁 18시부터 공원에 좀비가 출몰하는 호러나이트 시즌입니다. 인파와 공포를 피해 17시에 퇴장하는 전략이 매우 쾌적합니다."
+      "11/2(월)은 다음 날 공휴일(문화의 날)로 인한 초극성수기입니다. USJ는 공식 오픈(08:30)보다 1시간~1시간 30분 빠른 07:15~07:30경 문을 열므로 06:50까지 게이트에 줄을 서야 합니다.",
+      "생일 패스(버스데이 1데이 패스)는 반드시 공홈에서 '다이렉트 인'으로 구매하고, 전날까지 USJ 공식 앱에 동행인 QR까지 사전 등록해 두세요.",
+      "마리오 카트는 '싱글 라이더'로 탑승 시 대기 시간을 1/3로 단축할 수 있습니다. 탑승 후 크루에게 생일 스티커를 받아 가슴에 부착하세요!"
     ],
     timeline: [
       {
-        time: "07:30 ~ 08:30",
-        title: "난바역 ➔ USJ 이동 (오픈런)",
+        time: "06:15 ~ 06:45",
+        title: "난바역 ➔ USJ 이동 (초특급 오픈런 출발)",
         category: "transit",
-        desc: "난바(한신난바선) ➔ 니시쿠조 환승 ➔ 유니버설시티역 도착 (약 35분 소요)",
-        badge: "이동",
+        desc: "난바(한신난바선) ➔ 니시쿠조 환승 ➔ JR 유메사키선 ➔ 유니버설시티역 도착 (약 25~30분 소요)",
+        badge: "초특급 이동",
         cost: "교통비 약 370엔"
       },
       {
-        time: "09:00 ~ 17:00",
-        title: "유니버셜 스튜디오 재팬 (USJ) 종일 탐방",
+        time: "06:50 ~ 07:15",
+        title: "USJ 정문 게이트 앞 최전방 줄서기",
         category: "theme-park",
-        desc: "마리오 카트 쿠파의 도전장, 요시 어드벤처, 해리포터 포비든 저니, 플라잉 다이노소어 등 하이라이트 공략",
-        badge: "테마파크",
-        cost: "1일 스튜디오 패스 (약 8,600~10,400엔)",
+        desc: "06:50경 게이트 앞 도착하여 최전방 그룹에 합류. 짐 검사 가방 지퍼를 미리 열어두어 통과 시간 대폭 단축",
+        badge: "게이트 대기",
+        tip: "가방 지퍼 미리 열어두기 & 스마트폰 QR 화면 준비"
+      },
+      {
+        time: "07:15 ~ 07:30",
+        title: "[실제 조기 개장] QR 입장 ➔ 닌텐도 월드 경보 직행",
+        category: "theme-park",
+        desc: "공식 오픈(08:30)보다 1시간 빠른 실제 개장! QR 찍고 통과하자마자 가장 안쪽 '슈퍼 닌텐도 월드'로 빠른 걸음 직행 (초반 30~45분 무확약권 프리패스)",
+        badge: "조기 개장",
+        tip: "초반 30~45분 동안 확약권 없이 자유 입장 가능"
+      },
+      {
+        time: "07:45 ~ 10:30",
+        title: "[닌텐도 월드 집중 공략] 마리오 카트 & 생일 스티커",
+        category: "theme-park",
+        desc: "마리오 카트 쿠파의 도전장 직행 (싱글 라이더로 대기 1/3 단축!). 탑승 후 닌텐도 월드 내 크루에게 '생일 스티커(バースデーシール)' 받아 옷에 부착. USJ 앱으로 오후 3~4시 e정리권 추가 발권",
+        badge: "닌텐도 월드",
+        cost: "버스데이 1데이 패스 (약 9,000엔)",
         mapUrl: "https://maps.google.com/?cid=13926527581177696425"
       },
       {
+        time: "11:00 ~ 12:00",
+        title: "[이른 점심] 루이즈 N.Y. 피자 팔러",
+        category: "food",
+        desc: "뉴욕 에어리어 위치. 11시 30분부터 시작되는 파크 내 식당 대기 대란(1시간 이상)을 피하기 위해 11시 정각에 여유롭게 피자 식사",
+        badge: "테마파크 미식",
+        cost: "1인 약 1,500 ~ 2,500엔",
+        tip: "11시 정각 직행으로 대기 없이 식사"
+      },
+      {
+        time: "12:00 ~ 17:00",
+        title: "[오후 탐방] 해리포터 & 하이라이트 어트랙션",
+        category: "theme-park",
+        desc: "위저딩 월드 오브 해리포터(포비든 저니, 버터 맥주), 죠스, 쥬라기 공원 등 하이라이트 관람. 가슴에 붙인 생일 스티커로 이동 내내 크루들과 캐릭터들에게 특별 축하 환호 받기",
+        badge: "어트랙션/퍼레이드"
+      },
+      {
         time: "17:00 ~ 17:30",
-        title: "[스마트 조기 퇴장] 인파 분산 & 시내 복귀",
+        title: "[스마트 조기 퇴장] 호러나이트 전 시내 복귀",
         category: "transit",
-        desc: "호러나이트 좀비 이벤트(18시~) 인파 혼잡 전에 쾌적하게 퇴장하여 난바로 귀환",
+        desc: "저녁 18시부터 시작되는 할로윈 호러 나이트(좀비 출몰 및 극심한 인파 혼잡) 직전 쾌적하게 퇴장하여 난바로 귀환",
         badge: "꿀팁 전략"
       },
       {
         time: "18:30 ~ 20:30",
-        title: "[저녁] 와규 스키야키 치카라야마 오사카 난바 1호점",
+        title: "[저녁] 쿠시카츠 다루마 도톤보리점",
         category: "food",
-        desc: "구글 평점 4.9점의 인생 스키야키. 특제 타레 소스에 자작하게 졸인 최상급 와규를 신선한 계란에 찍어먹는 최고의 힐링 디너",
-        badge: "미식 ★★★",
-        cost: "1인 약 6,000 ~ 10,000엔",
-        mapUrl: "https://maps.google.com/?cid=15976576736448166063",
-        restaurantId: "sukiyaki-chikarayama"
+        desc: "USJ 종일 탐방 후 바삭한 오사카 명물 꼬치튀김(쿠시카츠)과 시원한 생맥주로 활기차고 유쾌하게 하루 마무리!",
+        badge: "미식 ★★",
+        cost: "1인 약 2,500 ~ 4,000엔",
+        mapUrl: "https://maps.google.com/?cid=13204320496193831615",
+        restaurantId: "kushikatsu-daruma"
       }
     ]
   },
@@ -295,47 +382,29 @@ export const GOURMET_RESTAURANTS = [
     proTip: "다양한 부위를 맛볼 수 있는 '스페셜 코스(Special Course)'를 추천하며, 한국어 메뉴판이 잘 구비되어 있습니다."
   },
   {
-    id: "kikukawa-gion",
-    name: "우나기시로 키쿠카와 교토기온점",
-    japaneseName: "うなぎ 四代目 菊川 京都祇園店",
+    id: "gyukatsu-katsugyu",
+    name: "규카츠 교토가츠규 산조가와라마치점",
+    japaneseName: "牛カツ京都勝牛 三条河原町店",
     day: 2,
     mealType: "2일차 점심 (런치)",
-    category: "나고야식 숯불 장어덮밥 (우나기동 & 히츠마부시)",
-    rating: 4.7,
-    reviewsCount: "1,100+",
-    priceRange: "4,500 ~ 6,500 JPY (인당)",
-    address: "교토부 교토시 히가시야마구 기온마치 미나미가와 570-120",
-    googleMapUrl: "https://maps.google.com/?cid=6205271270969705416",
-    reservationUrl: "https://yoyaku.toreta.in/kikukawa-gion/",
-    reservationRequired: "권장 (점심 피크타임)",
-    specialties: ["이치본주(장어 한 마리 통구이 덮밥)", "히츠마부시(3가지 방식으로 먹는 장어덮밥)", "우자쿠(장어 오이초무침)"],
-    description: "90년 넘게 이어온 장어 도매상의 비법으로 살아있는 최고급 장어를 즉석에서 숯불에 구워냅니다. 바삭한 껍질과 촉촉한 속살의 조화가 일품입니다.",
-    proTip: "기요미즈데라 관람 후 내려오는 길(기온 방면)에 도보로 방문하기 최적의 위치입니다. 히츠마부시를 시켜 오차즈케(녹차 육수)와 함께 즐겨보세요."
-  },
-  {
-    id: "kushikatsu-daruma",
-    name: "쿠시카츠 다루마 도톤보리점",
-    japaneseName: "串かつだるま 道頓堀店",
-    day: 2,
-    mealType: "2일차 저녁 (디너)",
-    category: "오사카 정통 꼬치튀김 (쿠시카츠)",
-    rating: 4.4,
-    reviewsCount: "4,500+",
-    priceRange: "2,500 ~ 4,000 JPY (인당)",
-    address: "오사카부 오사카시 주오구 도톤보리 1-6-4",
-    googleMapUrl: "https://maps.google.com/?cid=13204320496193831615",
-    reservationUrl: "",
-    reservationRequired: "현장 대기 (회전율 빠름)",
-    specialties: ["도톤보리 세트 (쇠고기, 새우, 치즈, 연근 등)", "도테야키 (소힘줄 된장조림)", "양배추 & 생맥주"],
-    description: "1929년 창업한 오사카 쿠시카츠의 원조! 특제 튀김옷으로 겉은 극도로 바삭하고 속은 부드럽습니다. 회전초밥처럼 레일로 배달되는 재미있는 시스템도 갖추고 있습니다.",
-    proTip: "도톤보리점은 거대한 아저씨 얼굴 간판으로 유명합니다. '도테야키'를 사이드로 꼭 추가해서 시원한 생맥주와 곁들이세요."
+    category: "소고기 규카츠 전문점 (겉바속촉 규카츠 정식)",
+    rating: 4.6,
+    reviewsCount: "2,100+",
+    priceRange: "2,500 ~ 3,800 JPY (인당)",
+    address: "교토부 교토시 나카교구 산조도리 가와라마치 히가시이루 나카지마초 73-2",
+    googleMapUrl: "https://www.google.com/maps/search/Gyukatsu+Kyoto+Katsugyu+Sanjo/",
+    reservationUrl: "https://gyukatsu-kyotokatsugyu.com/",
+    reservationRequired: "현장 방문 (회전율 양호)",
+    specialties: ["살치살(채끝) 규카츠 정식", "다시계란 & 카레 소스 세트", "1인 미니 화로 셀프 구이"],
+    description: "교토에서 시작된 일본 규카츠의 대표 브랜드. 고품질 소고기에 얇은 튀김옷을 입혀 겉은 바삭하고 속은 촉촉한 육즙이 살아있습니다. 개인 화로에 원하는 굽기로 살짝 구워 먹는 맛이 일품입니다.",
+    proTip: "기요미즈데라와 야사카 신사를 둘러보고 산조 방향으로 걸어와 점심 식사하기에 완벽한 동선입니다. 특제 다시계란에 듬뿍 찍어 드셔보세요."
   },
   {
     id: "sukiyaki-chikarayama",
     name: "와규 스키야키 치카라야마 오사카 난바 1호점",
     japaneseName: "和牛すき焼き 京都ちから山 大阪難波1号店",
-    day: 3,
-    mealType: "3일차 저녁 (디너)",
+    day: 2,
+    mealType: "2일차 저녁 (디너 교차)",
     category: "프리미엄 와규 스키야키 & 샤브샤브",
     rating: 4.9,
     reviewsCount: "1,500+",
@@ -345,8 +414,26 @@ export const GOURMET_RESTAURANTS = [
     reservationUrl: "https://www.hotpepper.jp/",
     reservationRequired: "사전 예약 필수 (만석 잦음)",
     specialties: ["A5 흑우 와규 스키야키 코스", "신선한 무항생제 유정란 소스", "마무리 우동사리 / 덮밥"],
-    description: "구글 평점 4.9점을 자랑하는 스키야키 맛집. 달콤짭조름한 특제 타레 소스에 최상급 와규를 살짝 익혀 계란 노른자에 찍어 먹으면 USJ에서 쌓인 하루 피로가 사르르 녹아내립니다.",
-    proTip: "USJ 조기 퇴장(17:00) 후 난바로 돌아와 18:30~19:00 타임으로 예약해두면 완벽한 동선이 완성됩니다."
+    description: "구글 평점 4.9점을 자랑하는 인생 스키야키 맛집. 달콤짭조름한 특제 타레 소스에 최상급 와규를 살짝 익혀 계란 노른자에 찍어 먹으면 교토에서 2만 보 걸은 하루 피로가 사르르 녹아내립니다.",
+    proTip: "교토 일정을 마치고 난바로 복귀하는 시점에 맞춰 18:30~19:00 타임으로 사전 예약해두면 기다림 없이 쾌적하게 힐링 디너를 즐길 수 있습니다."
+  },
+  {
+    id: "kushikatsu-daruma",
+    name: "쿠시카츠 다루마 도톤보리점",
+    japaneseName: "串かつだるま 道頓堀店",
+    day: 3,
+    mealType: "3일차 저녁 (디너 교차)",
+    category: "오사카 정통 꼬치튀김 (쿠시카츠)",
+    rating: 4.4,
+    reviewsCount: "4,500+",
+    priceRange: "2,500 ~ 4,000 JPY (인당)",
+    address: "오사카부 오사카시 주오구 도톤보리 1-6-4",
+    googleMapUrl: "https://maps.google.com/?cid=13204320496193831615",
+    reservationUrl: "",
+    reservationRequired: "현장 대기 (회전율 빠름)",
+    specialties: ["도톤보리 세트 (쇠고기, 새우, 치즈, 연근 등)", "도테야키 (소힘줄 된장조림)", "양배추 & 생맥주"],
+    description: "1929년 창업한 오사카 쿠시카츠의 원조! 특제 튀김옷으로 겉은 극도로 바삭하고 속은 부드럽습니다. USJ에서 신나게 에너지를 쏟은 후 시원한 생맥주와 함께 즐기는 오사카의 소울푸드입니다.",
+    proTip: "USJ 17시 스마트 조기 퇴장 후 난바로 돌아와 방문하기 좋습니다. 거대한 아저씨 얼굴 간판 앞에서 인증샷을 남기고 '도테야키'를 사이드로 꼭 추가하세요."
   },
   {
     id: "kuromon-market",
@@ -401,28 +488,29 @@ export const TRANSIT_GUIDE = [
     ]
   },
   {
-    title: "게이한 본선 특급 (오사카 ↔ 교토 기온)",
+    title: "게이한 본선 (오사카 ↔ 교토 후시미·기온)",
     type: "교토 당일치기",
     icon: "map-pin",
-    duration: "약 48분",
-    price: "편도 430엔 (게이한 1일 패스 약 1,100엔)",
-    route: "난바(지하철 미도스지선 190엔) ➔ 요도야바시역 ➔ [게이한 본선 특급] ➔ 기온시조역",
+    duration: "약 45~55분",
+    price: "편도 410~430엔 (게이한 1일 패스 약 1,100엔)",
+    route: "난바(미도스지선 190엔) ➔ 요도야바시역 ➔ [게이한 본선] ➔ 후시미이나리역 ➔ 기온시조역",
     tips: [
-      "추가 특급요금 없이 일반 운임만으로 특급(2층 열차 포함) 탑승이 가능합니다.",
-      "기온시조역에서 내리면 기요미즈데라, 하나미코지, 야사카 신사까지 도보 이동이 매우 편리합니다.",
-      "교토 내 후시미이나리나 우지까지 둘러볼 계획이라면 '게이한 패스 1일권'이 가성비가 좋습니다."
+      "요도야바시에서 게이한 급행/준급 또는 단바바시에서 보통 환승으로 후시미이나리역(여우신사)에 먼저 하차하세요.",
+      "후시미이나리역에서 기온시조역(청수사 방면)은 게이한 전철로 5정거장(약 10분, 220엔)입니다.",
+      "산조에서 은각사 이동 시에는 교토 시내버스(5번, 17번, 203번 등 / 약 20분 소요, 230엔)나 택시(약 1,500엔)를 이용하면 편리합니다."
     ]
   },
   {
-    title: "USJ 이동 루트 (난바역 ↔ 유니버설시티역)",
+    title: "USJ 초특급 오픈런 루트 (난바역 ↔ 유니버설시티역)",
     type: "테마파크 이동",
     icon: "compass",
-    duration: "약 30~35분",
+    duration: "약 25~30분",
     price: "편도 약 370엔 (한신 220엔 + JR 190엔)",
-    route: "오사카난바역 (한신난바선 쾌속급행) ➔ 니시쿠조역 환승 ➔ JR 유메사키선 ➔ 유니버설시티역",
+    route: "오사카난바역 (06:15 출발 / 한신난바선 쾌속급행) ➔ 니시쿠조역 환승 ➔ JR 유메사키선 ➔ 유니버설시티역 (06:45 도착)",
     tips: [
-      "니시쿠조역 환승은 계단 하나만 건너면 되는 초간단 평면 환승입니다.",
-      "이코카(ICOCA) 또는 스이카(Suica) 교통카드를 태그하면 티켓 발권 없이 바로 통과할 수 있습니다."
+      "06:15 난바역 출발편을 타면 06:45경 도착하여 06:50 정문 게이트 최전방 줄서기가 가능합니다.",
+      "니시쿠조역 환승은 계단 하나만 건너는 초간단 평면 환승입니다.",
+      "이코카(ICOCA) 또는 애플월렛 스이카/파스모를 태그하면 매표기 대기 없이 1초 만에 개찰구를 통과합니다."
     ]
   },
   {
@@ -443,17 +531,18 @@ export const DEFAULT_BUDGET_ITEMS = [
   { id: "flight", name: "왕복 항공권 (인천 ↔ 간사이)", category: "항공", costJpy: 35000, costKrw: 320000, isPerPerson: true },
   { id: "hotel", name: "난바 호텔 숙박비 (4박)", category: "숙박", costJpy: 80000, costKrw: 730000, isPerPerson: false },
   { id: "rapit", name: "난카이 라피트 왕복 티켓", category: "교통", costJpy: 2900, costKrw: 26500, isPerPerson: true },
-  { id: "transit-local", name: "교토/USJ/시내 교통비", category: "교통", costJpy: 3500, costKrw: 32000, isPerPerson: true },
-  { id: "usj-pass", name: "USJ 1일 스튜디오 패스", category: "관광", costJpy: 9500, costKrw: 87000, isPerPerson: true },
-  { id: "kiyomizu", name: "기요미즈데라 입장료", category: "관광", costJpy: 400, costKrw: 3600, isPerPerson: true },
+  { id: "transit-local", name: "교토/USJ/시내 교통비", category: "교통", costJpy: 3800, costKrw: 34800, isPerPerson: true },
+  { id: "usj-pass", name: "USJ 버스데이 1데이 패스 (공홈 다이렉트 인)", category: "관광", costJpy: 9000, costKrw: 82000, isPerPerson: true },
+  { id: "kiyomizu", name: "기요미즈데라(청수사) 입장료", category: "관광", costJpy: 400, costKrw: 3600, isPerPerson: true },
+  { id: "ginkakuji", name: "지쇼지(은각사) 입장료", category: "관광", costJpy: 500, costKrw: 4600, isPerPerson: true },
   { id: "food-d1-dinner", name: "1일차 디너 (마츠자카규 M 와규)", category: "식비", costJpy: 11000, costKrw: 100000, isPerPerson: true },
-  { id: "food-d2-lunch", name: "2일차 런치 (키쿠카와 장어덮밥)", category: "식비", costJpy: 5500, costKrw: 50000, isPerPerson: true },
-  { id: "food-d2-dinner", name: "2일차 디너 (쿠시카츠 다루마 & 맥주)", category: "식비", costJpy: 3500, costKrw: 32000, isPerPerson: true },
-  { id: "food-d3-usj", name: "3일차 USJ 내 점심 & 간식", category: "식비", costJpy: 2500, costKrw: 23000, isPerPerson: true },
-  { id: "food-d3-dinner", name: "3일차 디너 (치카라야마 와규 스키야키)", category: "식비", costJpy: 8000, costKrw: 73000, isPerPerson: true },
+  { id: "food-d2-lunch", name: "2일차 런치 (교토가츠규 규카츠)", category: "식비", costJpy: 2800, costKrw: 25600, isPerPerson: true },
+  { id: "food-d2-dinner", name: "2일차 디너 (치카라야마 와규 스키야키)", category: "식비", costJpy: 8000, costKrw: 73000, isPerPerson: true },
+  { id: "food-d3-usj", name: "3일차 USJ 점심 (루이즈 N.Y. 피자) & 간식", category: "식비", costJpy: 2500, costKrw: 23000, isPerPerson: true },
+  { id: "food-d3-dinner", name: "3일차 디너 (쿠시카츠 다루마 & 생맥주)", category: "식비", costJpy: 3500, costKrw: 32000, isPerPerson: true },
   { id: "food-d4-lunch", name: "4일차 런치 (구로몬 시장 해산물)", category: "식비", costJpy: 3500, costKrw: 32000, isPerPerson: true },
   { id: "food-d4-dinner", name: "4일차 디너 (고베규 진 테판야키)", category: "식비", costJpy: 16000, costKrw: 146000, isPerPerson: true },
-  { id: "food-cafe-snack", name: "카페 디저트 & 편의점 야식", category: "식비", costJpy: 6000, costKrw: 55000, isPerPerson: true },
+  { id: "food-cafe-snack", name: "카페 디저트(쿄센도 말차 등) & 야식", category: "식비", costJpy: 6000, costKrw: 55000, isPerPerson: true },
   { id: "shopping-budget", name: "면세점 & 기념품 쇼핑 예산", category: "쇼핑", costJpy: 20000, costKrw: 183000, isPerPerson: true },
   { id: "esim-insurance", name: "eSIM 데이터 & 여행자보험", category: "기타", costJpy: 2000, costKrw: 18000, isPerPerson: true }
 ];
@@ -464,13 +553,13 @@ export const CHECKLIST_ITEMS = [
   { id: "chk-3", category: "필수 서류", text: "항공권 E-티켓 및 호텔 예약 확인서 스마트폰 저장", checked: false },
   { id: "chk-4", category: "금융/환전", text: "해외 결제 카드 준비 (트래블로그, 트래블월렛 등)", checked: false },
   { id: "chk-5", category: "금융/환전", text: "엔화 현금 환전 (시장 및 소규모 점포용 1~2만엔)", checked: false },
-  { id: "chk-6", category: "전자기기", text: "일본 110V 11자 돼지코 어댑터 & 고속 보조배터리", checked: false },
+  { id: "chk-6", category: "전자기기", text: "일본 110V 11자 돼지코 & 10,000mAh 이상 고속 보조배터리 (USJ 앱 대기시간/정리권용)", checked: false },
   { id: "chk-7", category: "전자기기", text: "일본 여행용 eSIM/유심 설치 및 개통 확인", checked: false },
-  { id: "chk-8", category: "사전 예약", text: "USJ 1일 입장권 구매 및 USJ 공식 앱 다운로드", checked: false },
+  { id: "chk-8", category: "사전 예약", text: "USJ 버스데이 1데이 패스 공홈 예매 (다이렉트 인 필수 & 공식 앱 QR 사전 등록)", checked: false },
   { id: "chk-9", category: "사전 예약", text: "난카이 라피트 왕복 티켓 모바일 사전 예매", checked: false },
-  { id: "chk-10", category: "사전 예약", text: "1일차 와규(마츠자카규 M) / 4일차 테판야키(고베규 진) 식당 예약", checked: false },
-  { id: "chk-11", category: "의류/용품", text: "편안한 쿠션 운동화 (USJ 및 교토 2만 보 대비)", checked: false },
-  { id: "chk-12", category: "의류/용품", text: "가벼운 외투 및 겉옷 (10월 말~11월 초 일교차 대비)", checked: false },
+  { id: "chk-10", category: "사전 예약", text: "1일차 와규(마츠자카규 M) / 2일차 스키야키(치카라야마) / 4일차 테판야키(고베규 진) 식당 사전 예약", checked: false },
+  { id: "chk-11", category: "의류/용품", text: "편안한 쿠션 운동화 (교토 2만 보 & USJ 06:15 오픈런 대비)", checked: false },
+  { id: "chk-12", category: "의류/용품", text: "가벼운 외투 및 겉옷 (10월 말~11월 초 일교차 및 새벽 오픈런 대비)", checked: false },
   { id: "chk-13", category: "안전/비상", text: "해외 여행자 보험 가입", checked: false },
   { id: "chk-14", category: "안전/비상", text: "비상 상비약 (소화제, 진통제, 밴드, 휴족시간 등)", checked: false }
 ];
