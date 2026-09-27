@@ -402,10 +402,20 @@ export const GOURMET_RESTAURANTS = [
     address: "오사카부 오사카시 주오구 난바 1-1-19 (호젠지요코초 골목 안)",
     googleMapUrl: "https://maps.google.com/?cid=12107619520962549084",
     reservationUrl: "https://www.matsusaka-projects.com/",
-    reservationRequired: "필수 권장 (특히 할로윈 주말)",
+    reservationRequired: "필수 (특히 할로윈 주말)",
     specialties: ["마츠사카 소고기 특선 부위 6종 모둠", "프리미엄 살치살/안심", "냉면/가마솥밥"],
     description: "일본 3대 최고급 와규인 마츠사카규 전문점으로, 호젠지 요코초의 고즈넉한 전통 골목에 위치해 있습니다. 프라이빗 룸에서 마블링이 예술인 소고기를 부위별로 즐길 수 있습니다.",
-    proTip: "다양한 부위를 맛볼 수 있는 '스페셜 코스(Special Course)'를 추천하며, 한국어 메뉴판이 잘 구비되어 있습니다."
+    proTip: "다양한 부위를 맛볼 수 있는 '스페셜 코스(Special Course)'를 추천하며, 한국어 메뉴판이 잘 구비되어 있습니다.",
+    recommendation: "도톤보리·신사이바시 동선의 끝자락에 있어 산책 후 자연스럽게 도착하는 동선입니다. 1일차 저녁으로 오사카 중심지 산책 마무리에 최적이며, 마츠사카규는 오사카에서만 제대로 즐길 수 있는 프리미엄 와규입니다.",
+    reservationInfo: {
+      required: true,
+      method: "전화 / 공식 사이트 예약",
+      website: "https://www.matsusaka-projects.com/",
+      phone: "06-6211-6464",
+      note: "할로윈 주말(10/31~11/1) 전후는 1~2주 전 예약 필수. 평일 오후 6시 이전 도착 시 현장 가능 확률 높음."
+    },
+    waiting: "예약 시 즉시 착석. 당일 현장 방문 시 30~60분 대기 예상 (18시~20시 피크)",
+    walkFromHotel: "HOTEL AMANEK 오사카 난바 → 도톤보리 가로수길 산책 10분 → 호젠지요코초 골목 (총 도보 약 15분)"
   },
   {
     id: "gyukatsu-katsugyu",
@@ -419,29 +429,49 @@ export const GOURMET_RESTAURANTS = [
     priceRange: "2,500 ~ 3,800 JPY (인당)",
     address: "교토부 교토시 나카교구 산조도리 가와라마치 히가시이루 나카지마초 73-2",
     googleMapUrl: "https://www.google.com/maps/search/Gyukatsu+Kyoto+Katsugyu+Sanjo/",
-    reservationUrl: "https://gyukatsu-kyotokatsugyu.com/",
+    reservationUrl: "",
     reservationRequired: "현장 방문 (회전율 양호)",
     specialties: ["살치살(채끝) 규카츠 정식", "다시계란 & 카레 소스 세트", "1인 미니 화로 셀프 구이"],
     description: "교토에서 시작된 일본 규카츠의 대표 브랜드. 고품질 소고기에 얇은 튀김옷을 입혀 겉은 바삭하고 속은 촉촉한 육즙이 살아있습니다. 개인 화로에 원하는 굽기로 살짝 구워 먹는 맛이 일품입니다.",
-    proTip: "기요미즈데라와 야사카 신사를 둘러보고 산조 방향으로 걸어와 점심 식사하기에 완벽한 동선입니다. 특제 다시계란에 듬뿍 찍어 드셔보세요."
+    proTip: "기요미즈데라와 야사카 신사를 둘러보고 산조 방향으로 걸어와 점심 식사하기에 완벽한 동선입니다. 특제 다시계란에 듬뿍 찍어 드셔보세요.",
+    recommendation: "교토 동선(후시미이나리 → 기요미즈 → 기온)의 중간 지점 산조가와라마치에 위치해 있어 도보로 자연스럽게 이동하며 도착합니다. 12시 전후 방문 시 대기 없이 점심 식사가 가능하며, 점심 시간대 가성비 최고의 규카츠 정식을 즐길 수 있습니다.",
+    reservationInfo: {
+      required: false,
+      method: "현장 방문",
+      website: "https://gyukatsu-kyotokatsugyu.com/",
+      phone: "075-255-6622",
+      note: "점심(11:30~14:00) 예약 가능하나 회전율이 높아 대부분 현장 방문으로 충분. 12시 정각 전후 방문 시 대기 최소화."
+    },
+    waiting: "점심 피크(12:00~13:00) 15~30분 대기. 11:30 오픈 직후 또는 13:30 이후 방문 시 즉시 착석",
+    walkFromHotel: "교토 당일 동선: 후시미이나리 → 기요미즈 → 야사카신사 → 기온 → 산조가와라마치 (도보 약 40분, 점심 직후 방문)"
   },
   {
     id: "sukiyaki-chikarayama",
     name: "와규 스키야키 치카라야마 오사카 난바 1호점",
-    japaneseName: "和牛すき焼き 京都ちから山 大阪難波1号店",
+    japaneseName: "和牛すき焼き 京都力山 難波1号店",
     day: 2,
     mealType: "2일차 저녁 (디너 교차)",
     category: "프리미엄 와규 스키야키 & 샤브샤브",
     rating: 4.9,
     reviewsCount: "1,500+",
     priceRange: "6,000 ~ 10,000 JPY (인당)",
-    address: "오사카부 오사카시 주오구 난바 3-7-19",
+    address: "오사카부 오사카시 주오구 난바 3-6-16 케니아빌 1F",
     googleMapUrl: "https://maps.google.com/?cid=15976576736448166063",
-    reservationUrl: "https://www.hotpepper.jp/",
+    reservationUrl: "https://site.locaop.jp/mIrtf",
     reservationRequired: "사전 예약 필수 (만석 잦음)",
-    specialties: ["A5 흑우 와규 스키야키 코스", "신선한 무항생제 유정란 소스", "마무리 우동사리 / 덮밥"],
+    specialties: ["A5 와규 스키야키 코스 (리브 60g + 채끝 60g)", "신선한 무항생제 유정란 소스", "마무리 우동사리 / 덮밥"],
     description: "구글 평점 4.9점을 자랑하는 인생 스키야키 맛집. 달콤짭조름한 특제 타레 소스에 최상급 와규를 살짝 익혀 계란 노른자에 찍어 먹으면 교토에서 2만 보 걸은 하루 피로가 사르르 녹아내립니다.",
-    proTip: "교토 일정을 마치고 난바로 복귀하는 시점에 맞춰 18:30~19:00 타임으로 사전 예약해두면 기다림 없이 쾌적하게 힐링 디너를 즐길 수 있습니다."
+    proTip: "교토 일정을 마치고 난바로 복귀하는 시점에 맞춰 18:30~19:00 타임으로 사전 예약해두면 기다림 없이 쾌적하게 힐링 디너를 즐길 수 있습니다.",
+    recommendation: "교토 도보 여행(2만 보) 후 난바로 복귀하는 동선의 마지막 정점에 위치해 있어 힐링 디너로 완벽합니다. 난바역 19/20 게이트에서 도보 1분 거리로 이동 부담이 없고, 구글 4.9점의 검증된 품질로 여행 2일차의 피로를 말끔히 회복할 수 있습니다.",
+    reservationInfo: {
+      required: true,
+      method: "온라인 예약 (locaop / 공식 사이트) 또는 전화",
+      website: "https://site.locaop.jp/mIrtf",
+      phone: "06-6599-9501",
+      note: "11월 2~3일 주말+공휴일 포함 기간으로 2~3주 전 온라인 예약 권장. '극(極) 코스' 또는 '리브+채끝 세트' 선택 시 1인 8,000~10,000엔."
+    },
+    waiting: "예약 시 즉시 착석. 당일 현장 방문 시 45분~1.5시간 대기 (18시~20시 피크, 주말/공휴일 1.5시간+)",
+    walkFromHotel: "HOTEL AMANEK 오사카 난바 → 난바역 19/20 게이트 도보 3분 → 케니아빌 (총 도보 약 5분)"
   },
   {
     id: "kushikatsu-daruma",
@@ -452,14 +482,24 @@ export const GOURMET_RESTAURANTS = [
     category: "오사카 정통 꼬치튀김 (쿠시카츠)",
     rating: 4.4,
     reviewsCount: "4,500+",
-    priceRange: "2,500 ~ 4,000 JPY (인당)",
-    address: "오사카부 오사카시 주오구 도톤보리 1-6-4",
+    priceRange: "1,500 ~ 2,500 JPY (인당, 세트 기준)",
+    address: "오사카부 오사카시 주오구 도톤보리 1-6-8",
     googleMapUrl: "https://maps.google.com/?cid=13204320496193831615",
-    reservationUrl: "",
-    reservationRequired: "현장 대기 (회전율 빠름)",
-    specialties: ["도톤보리 세트 (쇠고기, 새우, 치즈, 연근 등)", "도테야키 (소힘줄 된장조림)", "양배추 & 생맥주"],
+    reservationUrl: "https://www.kushikatu-daruma.com/location/doutonbori",
+    reservationRequired: "불필요 (140석 / 회전율 빠름)",
+    specialties: ["도톤보리 세트 (쇠고기·새우·치즈·연근 등 10+종)", "도테야키 (소힘줄 된장조림)", "양배추 & 생맥주"],
     description: "1929년 창업한 오사카 쿠시카츠의 원조! 특제 튀김옷으로 겉은 극도로 바삭하고 속은 부드럽습니다. USJ에서 신나게 에너지를 쏟은 후 시원한 생맥주와 함께 즐기는 오사카의 소울푸드입니다.",
-    proTip: "USJ 17시 스마트 조기 퇴장 후 난바로 돌아와 방문하기 좋습니다. 거대한 아저씨 얼굴 간판 앞에서 인증샷을 남기고 '도테야키'를 사이드로 꼭 추가하세요."
+    proTip: "USJ 17시 스마트 조기 퇴장 후 난바로 돌아와 방문하기 좋습니다. 거대한 아저씨 얼굴 간판 앞에서 인증샷을 남기고 '도테야키'를 사이드로 꼭 추가하세요.",
+    recommendation: "USJ 퇴장(17:00~17:30) 후 난바 복귀 동선의 끝자락, 도톤보리 거대한 간판 바로 앞이라 접근성이 최고입니다. 140석의 넓은 좌석과 빠른 회전율로 피크 시간에도 큰 부담 없이 식사 가능하며, 1인 1,500~2,500엔의 가성비로 USJ 피로 회복에 완벽한 선택입니다.",
+    reservationInfo: {
+      required: false,
+      method: "현장 방문 (140석 / 빠르게 회전)",
+      website: "https://www.kushikatu-daruma.com/location/doutonbori",
+      phone: "06-6213-8101",
+      note: "2인 이상 전화 예약 가능 (평일 18시까지). 토·일·공휴일·황금휴가·お盆·연말연시는 예약 미수리. 1인당 음료 1잔 이상 주문 필수. 예약 시 착석 시간 1.5시간 제한."
+    },
+    waiting: "평일 피크(18~20시) 20~40분 대기. 토·일/공휴일 40분~1시간 대기 가능. 17:30~18:00 또는 20:30 이후 방문 시 대기 최소화",
+    walkFromHotel: "HOTEL AMANEK 오사카 난바 → 도톤보리 아베마루교 방면 도보 8분 → 다루마 도톤보리점 (총 도보 약 10분)"
   },
   {
     id: "kuromon-market",
@@ -474,10 +514,20 @@ export const GOURMET_RESTAURANTS = [
     address: "오사카부 오사카시 주오구 니혼바시 2-4-1",
     googleMapUrl: "https://maps.google.com/?cid=12402117845945925953",
     reservationUrl: "",
-    reservationRequired: "자유 방문 (10시~14시 추천)",
+    reservationRequired: "불필요 (자유 방문)",
     specialties: ["통 성게알(우니)", "대왕 가리비 버터구이", "생참치(오도로) 초밥", "킹크랩 다리 구이"],
     description: "약 200년 역사를 지닌 오사카 대표 재래시장. 즉석에서 구워주는 신선한 해산물과 꼬치구이, 과일 주스를 맛보며 활기찬 시장 분위기를 느낄 수 있습니다.",
-    proTip: "현금 결제만 가능한 점포가 많으므로 약간의 엔화 현금을 준비하세요. 시장 내 이트인(Eat-in) 공간이 마련된 매장을 이용하면 편리합니다."
+    proTip: "현금 결제만 가능한 점포가 많으므로 약간의 엔화 현금을 준비하세요. 시장 내 이트인(Eat-in) 공간이 마련된 매장을 이용하면 편리합니다.",
+    recommendation: "숙소에서 도보 10분 거리로 이동 부담이 전혀 없습니다. 오전 10시 오픈 직후 방문 시 최상급 신선도의 해산물(우니·오도로)을 즐길 수 있으며, 1인 2,000~4,500엔의 합리적 가격으로 '오사카의 부엌'이라 불리는 진면목을 경험할 수 있습니다.",
+    reservationInfo: {
+      required: false,
+      method: "자유 방문",
+      website: "",
+      phone: "",
+      note: "10:00~14:00 방문 권장 (신선도 최고, 피크 시간대). 현금 결제 가능한 점포가 많으므로 엔화 현금 준비 필수. 카드 가능 여부 개별 매장 상이."
+    },
+    waiting: "10:00~11:00: 대기 없음. 11:00~13:00: 10~20분 대기. 13:00~14:00: 일부 점포 마감",
+    walkFromHotel: "HOTEL AMANEK 오사카难바 → 구로몬 시장 (도보 약 10분)"
   },
   {
     id: "teppanyaki-zin",
@@ -495,7 +545,17 @@ export const GOURMET_RESTAURANTS = [
     reservationRequired: "사전 예약 필수",
     specialties: ["A5 고베규 서로인 & 안심 스테이크", "활 랍스터/전복 철판구이", "특제 마늘 볶음밥"],
     description: "화려한 셰프의 철판 퍼포먼스와 함께 일본 최상위 브랜드 '고베규'의 극상 풍미를 즐길 수 있는 프리미엄 테판야키 레스토랑입니다. 여행 마지막 밤의 특별한 기념 디너로 최고입니다.",
-    proTip: "카운터석을 지정 예약하여 눈앞에서 펼쳐지는 불쇼와 조리 과정을 감상하세요. 코스 마지막의 '마늘 볶음밥'은 필수 별미입니다."
+    proTip: "카운터석을 지정 예약하여 눈앞에서 펼쳐지는 불쇼와 조리 과정을 감상하세요. 코스 마지막의 '마늘 볶음밥'은 필수 별미입니다.",
+    recommendation: "숙소에서 도보 12분 거리로 이동이 가볍습니다. 여행 마지막 밤(11/4)의 피날레 디너로 A5 고베규 + 활 랍스터의 최상급 코스를 즐길 수 있으며, 화려한 테판 퍼포먼스와 함께 4박 5일 오사카 여행의 완벽한 마무리를 선사합니다. 1인 12,000~22,000엔으로 여행 중 가장 비쌈에 특별한 의미가 있습니다.",
+    reservationInfo: {
+      required: true,
+      method: "TableCheck / 전화 예약",
+      website: "https://www.tablecheck.com/",
+      phone: "06-6631-1941",
+      note: "11월 3~4일 주말+공휴일 포함 마지막 저녁이라 2~3주 전 예약 필수. 카운터석 지정 가능. 1인 12,000~22,000엔."
+    },
+    waiting: "사전 예약 필수. 당일 현장 방문 시 예약 불가 (전석 예약제). 예약 시 즉시 착석, 90~120분 코스 시간 제공",
+    walkFromHotel: "HOTEL AMANEK 오사카难바 → 난바역 경유 도톤보리 방면 도보 → 진 난바점 (총 도보 약 12분)"
   }
 ];
 
@@ -553,25 +613,6 @@ export const TRANSIT_GUIDE = [
   }
 ];
 
-export const DEFAULT_BUDGET_ITEMS = [
-  { id: "flight", name: "왕복 항공권 (인천 ↔ 간사이)", category: "항공", costJpy: 35000, costKrw: 320000, isPerPerson: true },
-  { id: "hotel", name: "HOTEL AMANEK Osaka Namba 숙박비 (4박)", category: "숙박", costJpy: 80000, costKrw: 730000, isPerPerson: false },
-  { id: "rapit", name: "난카이 라피트 왕복 티켓", category: "교통", costJpy: 2900, costKrw: 26500, isPerPerson: true },
-  { id: "transit-local", name: "교토/USJ/시내 교통비", category: "교통", costJpy: 3800, costKrw: 34800, isPerPerson: true },
-  { id: "usj-pass", name: "USJ 버스데이 1데이 패스 (공홈 다이렉트 인)", category: "관광", costJpy: 9000, costKrw: 82000, isPerPerson: true },
-  { id: "kiyomizu", name: "기요미즈데라(청수사) 입장료", category: "관광", costJpy: 400, costKrw: 3600, isPerPerson: true },
-  { id: "ginkakuji", name: "지쇼지(은각사) 입장료", category: "관광", costJpy: 500, costKrw: 4600, isPerPerson: true },
-  { id: "food-d1-dinner", name: "1일차 디너 (마츠자카규 M 와규)", category: "식비", costJpy: 11000, costKrw: 100000, isPerPerson: true },
-  { id: "food-d2-lunch", name: "2일차 런치 (교토가츠규 규카츠)", category: "식비", costJpy: 2800, costKrw: 25600, isPerPerson: true },
-  { id: "food-d2-dinner", name: "2일차 디너 (치카라야마 와규 스키야키)", category: "식비", costJpy: 8000, costKrw: 73000, isPerPerson: true },
-  { id: "food-d3-usj", name: "3일차 USJ 점심 (루이즈 N.Y. 피자) & 간식", category: "식비", costJpy: 2500, costKrw: 23000, isPerPerson: true },
-  { id: "food-d3-dinner", name: "3일차 디너 (쿠시카츠 다루마 & 생맥주)", category: "식비", costJpy: 3500, costKrw: 32000, isPerPerson: true },
-  { id: "food-d4-lunch", name: "4일차 런치 (구로몬 시장 해산물)", category: "식비", costJpy: 3500, costKrw: 32000, isPerPerson: true },
-  { id: "food-d4-dinner", name: "4일차 디너 (고베규 진 테판야키)", category: "식비", costJpy: 16000, costKrw: 146000, isPerPerson: true },
-  { id: "food-cafe-snack", name: "카페 디저트(쿄센도 말차 등) & 야식", category: "식비", costJpy: 6000, costKrw: 55000, isPerPerson: true },
-  { id: "shopping-budget", name: "면세점 & 기념품 쇼핑 예산", category: "쇼핑", costJpy: 20000, costKrw: 183000, isPerPerson: true },
-  { id: "esim-insurance", name: "eSIM 데이터 & 여행자보험", category: "기타", costJpy: 2000, costKrw: 18000, isPerPerson: true }
-];
 
 export const CHECKLIST_ITEMS = [
   { id: "chk-1", category: "필수 서류", text: "여권 유효기간 확인 (출국일 기준 6개월 이상 권장)", checked: false },

@@ -3,13 +3,12 @@
  */
 
 import { TRIP_META, ITINERARY_DAYS, GOURMET_RESTAURANTS, TRANSIT_GUIDE, CHECKLIST_ITEMS } from './data.js';
-import BudgetCalculator from './calculator.js';
+
 
 class OsakaTripApp {
   constructor() {
     this.currentDay = 1;
     this.checklist = JSON.parse(localStorage.getItem('osaka_trip_checklist')) || [...CHECKLIST_ITEMS];
-    this.calculator = null;
     
     this.init();
   }
@@ -21,7 +20,6 @@ class OsakaTripApp {
     this.renderGourmetSection();
     this.renderTransitSection();
     this.renderChecklist();
-    this.initBudgetCalculator();
     this.bindGlobalEvents();
     this.initLucideIcons();
   }
@@ -260,73 +258,137 @@ class OsakaTripApp {
     `;
   }
 
-  // 3. 미식 & 맛집 섹션
+  // 3. 미식 & 맛집 섹션 (날짜별 추천)
   renderGourmetSection() {
     const container = document.getElementById('gourmet-cards-grid');
     if (!container) return;
 
-    container.innerHTML = GOURMET_RESTAURANTS.map(res => `
-      <div class="glass-card rounded-2xl p-6 border border-slate-800/80 bg-slate-900/60 hover:border-pink-500/40 transition-all duration-300 flex flex-col justify-between group">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-pink-500/10 text-pink-400 border border-pink-500/20">
-              ${res.mealType}
-            </span>
-            <div class="flex items-center gap-1 text-amber-400 font-bold text-xs">
-              <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-              <span>${res.rating}</span>
-              <span class="text-slate-500 font-normal">(${res.reviewsCount})</span>
-            </div>
-          </div>
+    // Group restaurants by day
+    const dayGroups = {};
+    GOURMET_RESTAURANTS.forEach(res => {
+      const dayKey = res.mealType;
+      if (!dayGroups[dayKey]) dayGroups[dayKey] = [];
+      dayGroups[dayKey].push(res);
+    });
 
+    // Sort days naturally (lunch, dinner, cafe, all, night)
+    const dayOrder = ['1일차 점심', '1일차 저녁', '2일차 점심', '3일차 점심', '4일차 저녁', '5일차 점심', '전일권'];
+    const sortedDays = Object.keys(dayGroups).sort((a, b) => {
+      const ai = dayOrder.indexOf(a);
+      const bi = dayOrder.indexOf(b);
+      return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+    });
+
+    container.innerHTML = `
+      <div class="space-y-8">
+        <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-pink-500/10 border border-pink-500/20">
+          <span class="text-2xl">🍽️</span>
           <div>
-            <h4 class="text-lg font-bold text-white group-hover:text-pink-300 transition-colors">${res.name}</h4>
-            <p class="text-xs text-slate-400 mt-0.5 font-japanese">${res.japaneseName}</p>
-          </div>
-
-          <div class="space-y-1.5 text-xs">
-            <div class="text-slate-300 flex items-center gap-2">
-              <span class="text-slate-500">종류:</span>
-              <span class="font-medium text-slate-200">${res.category}</span>
-            </div>
-            <div class="text-slate-300 flex items-center gap-2">
-              <span class="text-slate-500">예산:</span>
-              <span class="font-mono text-emerald-400 font-semibold">${res.priceRange}</span>
-            </div>
-            <div class="text-slate-300 flex items-center gap-2">
-              <span class="text-slate-500">예약:</span>
-              <span class="font-medium ${res.reservationRequired.includes('필수') ? 'text-rose-400 font-bold' : 'text-slate-300'}">${res.reservationRequired}</span>
-            </div>
-          </div>
-
-          <p class="text-xs text-slate-400 leading-relaxed line-clamp-3">${res.description}</p>
-
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            ${res.specialties.map(spec => `
-              <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300 border border-slate-700">
-                🥢 ${spec}
-              </span>
-            `).join('')}
+            <h3 class="text-sm font-bold text-pink-300">식당 추천 리스트</h3>
+            <p class="text-xs text-slate-400 mt-0.5">동선 기반 추천 — 각 식당의 추천 사유, 예약 정보, 웨이팅, 대표 메뉴를 확인하세요</p>
           </div>
         </div>
 
-        <div class="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between gap-2">
-          <a href="${res.googleMapUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
-            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
-            <span>구글 지도</span>
-          </a>
+        <div class="space-y-6">
+          ${sortedDays.map(dayKey => `
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-md shadow-pink-500/20">
+                  ${dayKey}
+                </span>
+                <span class="text-xs text-slate-500">${dayGroups[dayKey].length}곳 추천</span>
+              </div>
 
-          ${res.reservationUrl ? `
-            <a href="${res.reservationUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-pink-600 hover:bg-pink-500 text-white flex items-center gap-1 shadow-md shadow-pink-500/20">
-              <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
-              <span>예약 링크</span>
-            </a>
-          ` : `
-            <span class="text-[11px] text-slate-500 italic">현장 방문</span>
-          `}
+              <div class="space-y-4">
+                ${dayGroups[dayKey].map(res => {
+                  const resBadgeClass = res.reservationRequired.includes('필수')
+                    ? 'bg-rose-500/15 text-rose-400 border-rose-500/30'
+                    : res.reservationRequired.includes('권장')
+                      ? 'bg-amber-500/15 text-amber-400 border-amber-500/30'
+                      : 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
+
+                  return `
+                    <div class="rounded-2xl p-5 md:p-6 border border-slate-800/80 bg-slate-900/60 hover:border-pink-500/30 transition-all duration-300 space-y-4 group">
+                      <!-- Header -->
+                      <div class="flex flex-col md:flex-row md:items-start justify-between gap-3">
+                        <div class="space-y-1">
+                          <h4 class="text-lg font-bold text-white group-hover:text-pink-300 transition-colors">${res.name}</h4>
+                          <p class="text-xs text-slate-400 font-japanese">${res.japaneseName}</p>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap">
+                          <span class="text-xs font-bold px-2.5 py-1 rounded-lg ${resBadgeClass} border">
+                            ${res.reservationRequired}
+                          </span>
+                          <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                            ★ ${res.rating}
+                          </span>
+                        </div>
+                      </div>
+
+                      <!--推荐理由 + Walking from hotel -->
+                      <div class="space-y-2">
+                        <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+                          <span class="text-pink-400 shrink-0 mt-0.5">💡</span>
+                          <div>
+                            <span class="font-bold text-slate-200">추천 사유: </span>
+                            <span>${res.recommendation}</span>
+                          </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+                          <span class="text-cyan-400 shrink-0 mt-0.5">🚶</span>
+                          <span>${res.walkFromHotel}</span>
+                        </div>
+                      </div>
+
+                      <!-- Info Grid -->
+                      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
+                          <span class="text-slate-500 flex items-center gap-1.5">📋 예약 정보</span>
+                          ${res.reservationInfo}
+                        </div>
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
+                          <span class="text-slate-500 flex items-center gap-1.5">⭐ 대표 메뉴</span>
+                          ${res.specialties.map(d => `<span class="block text-slate-200 pl-4">• ${d}</span>`).join('')}
+                        </div>
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
+                          <span class="text-slate-500 flex items-center gap-1.5">💰 가격대</span>
+                          <span class="font-mono text-emerald-400 font-semibold">${res.priceRange}</span>
+                          <span class="text-slate-500 block">1인당 기준</span>
+                        </div>
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
+                          <span class="text-slate-500 flex items-center gap-1.5">⏱️ 웨이팅</span>
+                          <span>${res.waiting}</span>
+                        </div>
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
+                          <span class="text-slate-500 flex items-center gap-1.5">📍 주소</span>
+                          <span>${res.address}</span>
+                        </div>
+                        ${res.googleMapUrl ? `
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
+                          <span class="text-slate-500 flex items-center gap-1.5">🗺️ 지도</span>
+                          <a href="${res.googleMapUrl}" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-1">
+                            <span>Google Maps</span> ↔
+                          </a>
+                        </div>` : ''}
+                      </div>
+
+                      <!-- Signature + Links -->
+                      ${res.reservationUrl ? `
+                        <div class="pt-3 border-t border-slate-800 flex flex-wrap items-center gap-3">
+                          <a href="${res.reservationUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3.5 py-2 rounded-lg bg-pink-600 hover:bg-pink-500 text-white flex items-center gap-1.5 shadow-md shadow-pink-500/20">
+                            📅 예약 사이트 바로가기
+                          </a>
+                          <span class="text-xs text-slate-500">${res.specialties[0]}</span>
+                        </div>` : ''}
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          `).join('')}
         </div>
       </div>
-    `).join('');
+    `;
   }
 
   showRestaurantDetail(id) {
@@ -337,13 +399,24 @@ class OsakaTripApp {
     const modalContent = document.getElementById('restaurant-modal-content');
     if (!modalContainer || !modalContent) return;
 
+    const resBadge = res.reservationRequired.includes('필수')
+      ? 'bg-rose-500/15 text-rose-400 border-rose-500/30'
+      : res.reservationRequired.includes('권장')
+        ? 'bg-amber-500/15 text-amber-400 border-amber-500/30'
+        : 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
+
     modalContent.innerHTML = `
       <div class="space-y-6">
         <div class="flex justify-between items-start">
           <div>
-            <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-500/20 text-pink-400 border border-pink-500/30">
-              ${res.mealType} · Day ${res.day}
-            </span>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-500/20 text-pink-400 border border-pink-500/30">
+                ${res.mealType} · Day ${res.day}
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold ${resBadge} border">
+                ${res.reservationRequired}
+              </span>
+            </div>
             <h3 class="text-2xl font-bold text-white mt-2">${res.name}</h3>
             <p class="text-sm text-slate-400 font-japanese">${res.japaneseName}</p>
           </div>
@@ -352,29 +425,45 @@ class OsakaTripApp {
           </button>
         </div>
 
+        <!-- Recommendation & Walking -->
+        <div class="space-y-3">
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+            <span class="text-xs font-bold text-slate-400 block mb-1.5">💡 추천 사유</span>
+            <p class="text-sm text-slate-200 leading-relaxed">${res.recommendation}</p>
+          </div>
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+            <span class="text-xs font-bold text-slate-400 block mb-1.5">🚶 숙소에서 이동</span>
+            <p class="text-sm text-slate-200">${res.walkFromHotel}</p>
+          </div>
+        </div>
+
+        <!-- Info Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-          <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
-            <span class="text-xs text-slate-400 block">구글 평점</span>
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+            <span class="text-xs font-bold text-slate-400 block mb-2">📋 예약 정보</span>
+            <p class="text-sm text-slate-200 leading-relaxed">${res.reservationInfo}</p>
+          </div>
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+            <span class="text-xs font-bold text-slate-400 block mb-2">⏱️ 웨이팅</span>
+            <p class="text-sm text-slate-200 leading-relaxed">${res.waiting}</p>
+          </div>
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+            <span class="text-xs font-bold text-slate-400 block mb-2">💰 1인당 가격대</span>
+            <span class="text-xl font-mono font-bold text-emerald-400 mt-1 block">${res.priceRange}</span>
+          </div>
+          <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+            <span class="text-xs font-bold text-slate-400 block mb-2">⭐ 구글 평점</span>
             <div class="flex items-center gap-2 mt-1">
-              <span class="text-xl font-black text-amber-400">★ ${res.rating}</span>
+              <span class="text-xl font-black text-amber-400">${res.rating}</span>
               <span class="text-xs text-slate-400">(${res.reviewsCount} 리뷰)</span>
             </div>
           </div>
-          <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
-            <span class="text-xs text-slate-400 block">예상 1인 예산</span>
-            <span class="text-lg font-mono font-bold text-emerald-400 mt-1 block">${res.priceRange}</span>
-          </div>
         </div>
 
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-slate-200">식당 소개 & 매력 포인트</h4>
-          <p class="text-sm text-slate-300 leading-relaxed">${res.description}</p>
-        </div>
-
-        <div class="space-y-3">
-          <h4 class="text-sm font-bold text-slate-200">대표 시그니처 메뉴</h4>
+          <h4 class="text-sm font-bold text-slate-200">🍽️ 대표 메뉴</h4>
           <ul class="space-y-1.5 text-sm text-slate-300">
-            ${res.specialties.map(s => `<li class="flex items-center gap-2"><span class="text-pink-400">✔</span> ${s}</li>`).join('')}
+            ${res.specialties.map(d => `<li class="flex items-center gap-2"><span class="text-pink-400">✔</span> ${d}</li>`).join('')}
           </ul>
         </div>
 
@@ -405,7 +494,6 @@ class OsakaTripApp {
     modalContainer.classList.add('flex');
     this.initLucideIcons();
   }
-
   closeRestaurantModal() {
     const modalContainer = document.getElementById('restaurant-modal');
     if (modalContainer) {
@@ -514,9 +602,7 @@ class OsakaTripApp {
     });
   }
 
-  initBudgetCalculator() {
-    this.calculator = new BudgetCalculator();
-  }
+
 
   bindGlobalEvents() {
     // Modal background close

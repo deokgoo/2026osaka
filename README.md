@@ -44,9 +44,8 @@ python3 -m http.server 3000
 ├── css/
 │   └── style.css           # 글래스모피즘, 폰트 및 디자인 시스템
 ├── js/
-│   ├── data.js             # 일정, 맛집, 교통, 예산, 체크리스트 데이터
-│   ├── app.js              # UI 렌더링, 탭 전환, D-Day, 모달, 체크리스트 관리
-│   └── calculator.js       # 실시간 예산 계산기 엔진
+│   ├── data.js             # 일정, 맛집, 교통, 체크리스트 데이터
+│   └── app.js              # UI 렌더링, 탭 전환, D-Day, 모달, 체크리스트 관리
 ├── draft.md                # 초기 일정 기획안 원본
 └── README.md               # 프로젝트 안내 문서
 ```

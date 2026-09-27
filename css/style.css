@@ -132,3 +132,22 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* Restaurant recommendation cards */
+#gourmet-cards-grid > div > div {
+  scroll-margin-top: 5rem;
+}
+
+#gourmet-cards-grid .group:hover {
+  box-shadow: 0 12px 40px -8px rgba(244, 63, 94, 0.18), 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+#gourmet-cards-grid .group {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Modal inner scroll */
+#restaurant-modal-content {
+  scroll-margin-top: 1rem;
+}
