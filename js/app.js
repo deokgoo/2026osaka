@@ -328,11 +328,7 @@ class OsakaTripApp {
                       <!--推荐理由 + Walking from hotel -->
                       <div class="space-y-2">
                         <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
-                          <span class="text-pink-400 shrink-0 mt-0.5">💡</span>
-                          <div>
-                            <span class="font-bold text-slate-200">추천 사유: </span>
-                            <span>${res.recommendation}</span>
-                          </div>
+                          ${typeof res.recommendation === 'string' ? `<span class="text-pink-400 shrink-0 mt-0.5">💡</span><span><span class="font-bold text-slate-200">추천 사유: </span>${res.recommendation}</span>` : `<span class="text-pink-400 shrink-0 mt-0.5">💡</span><span>${res.recommendation[0] || ''}</span>`}
                         </div>
                         <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
                           <span class="text-cyan-400 shrink-0 mt-0.5">🚶</span>
@@ -344,7 +340,7 @@ class OsakaTripApp {
                       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">📋 예약 정보</span>
-                          ${res.reservationInfo}
+                          ${window.osakaApp.formatReservation(res.reservationInfo)}
                         </div>
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">⭐ 대표 메뉴</span>
@@ -391,6 +387,17 @@ class OsakaTripApp {
     `;
   }
 
+  formatReservation = (info) => {
+    if (!info) return '';
+    if (typeof info === 'string') return info;
+    if (Array.isArray(info)) return info.map(s => `<div class="flex items-start gap-2 py-1.5 border-b border-slate-700/50 last:border-0"><span class="text-rose-400 shrink-0 mt-0.5">▸</span><span class="text-slate-200">${s}</span></div>`).join('');
+    let out = '';
+    if (info.methods?.length) out += `<div class="text-xs text-slate-400 mb-1.5">예약 방법</div><ul class="space-y-1">${info.methods.map(s => `<li class="flex items-start gap-2"><span class="text-rose-400 shrink-0">•</span><span class="text-slate-200">${s}</span></li>`).join('')}</ul>`;
+    if (info.timing) { if (out) out += `<hr class="border-slate-700/50 my-2">`; out += `<div class="flex items-start gap-2"><span class="text-rose-400 shrink-0">⏰</span><span class="text-slate-200">${info.timing}</span></div>`; }
+    if (info.phone) { if (out) out += `<div class="flex items-start gap-2 mt-1.5"><span class="text-rose-400 shrink-0">📞</span><span class="text-slate-200">${info.phone}</span></div>`; }
+    return out;
+  },
+
   showRestaurantDetail(id) {
     const res = GOURMET_RESTAURANTS.find(r => r.id === id);
     if (!res) return;
@@ -399,9 +406,9 @@ class OsakaTripApp {
     const modalContent = document.getElementById('restaurant-modal-content');
     if (!modalContainer || !modalContent) return;
 
-    const resBadge = res.reservationRequired.includes('필수')
+    const resBadge = (res.reservationRequired || '').includes('필수')
       ? 'bg-rose-500/15 text-rose-400 border-rose-500/30'
-      : res.reservationRequired.includes('권장')
+      : (res.reservationRequired || '').includes('권장')
         ? 'bg-amber-500/15 text-amber-400 border-amber-500/30'
         : 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
 
@@ -441,7 +448,7 @@ class OsakaTripApp {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
             <span class="text-xs font-bold text-slate-400 block mb-2">📋 예약 정보</span>
-            <p class="text-sm text-slate-200 leading-relaxed">${res.reservationInfo}</p>
+            <p class="text-sm text-slate-200 leading-relaxed">${window.osakaApp.formatReservation(res.reservationInfo)}</p>
           </div>
           <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
             <span class="text-xs font-bold text-slate-400 block mb-2">⏱️ 웨이팅</span>
