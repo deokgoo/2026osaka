@@ -564,6 +564,7 @@ export const GOURMET_RESTAURANTS = [
     type: "오코노미야끼·야키니꾸",
     location: "난바 미스지쥬 2-초메, Namba Station 도보 3분",
     day: 1,
+    mealType: "1일차 점심 (런치)",
     reservationRequired: "불필요 · 현장 대기",
     recommendation: "도톤보리 메인 스트리트 끝자락에 위치한 로컬 오코노미야끼 전문점. 1인용 판에 직접 구워 먹는 미스지쥬 스타일(쫀득·층층이)이 특종. 웨이팅 20~30분만 인내하면 현지 사람 같은 식사를 가능. 영어 메뉴 없음 → 직원 지시 가능.",
     reservationInfo: {
@@ -571,11 +572,7 @@ export const GOURMET_RESTAURANTS = [
       timing: "11/1(토) 점심 11:30~13:30 또는 저녁 5:30~7:30 권장",
       phone: "06-6213-5533"
     },
-    menu: [
-      { name: "오코노미야끼(우천 포함)", price: "¥2,800~4,200" },
-      { name: "오코노미야끼(채소 포함)", price: "¥2,200" },
-      { name: "카기아게 치킨", price: "¥1,200" }
-    ],
+    specialties: ["오코노미야끼(우천 포함) ¥2,800~4,200", "오코노미야끼(채소 포함) ¥2,200", "카기아게 치킨 ¥1,200"],
     pricePerPerson: "인당 ¥2,500~4,500 (약 ₩25,000~45,000)",
     waiting: "점심/저녁 피크(5:30~7:30PM) 20~30분 대기, 오후 2~4시 사이는 0~10분",
     walkFromHotel: "HOTEL AMANEK → 난바역 서쪽 출구 → 미스지쥬 2-초메 방면 도보 5분 → Hirota"
@@ -587,17 +584,14 @@ export const GOURMET_RESTAURANTS = [
     type: "타코야키·스몰플레이트",
     location: "난바 니시키市场 남측, Namba Station 도보 6분",
     day: 1,
+    mealType: "1일차 점심 (런치)",
     reservationRequired: "불필요 · 현장 대기",
     recommendation: "타코야키 전문점 중에서도 '촉촉+진한 소스' 스타일로 유명. 오사카 3대 타코야키로 뽑히는 적. 16구 세트(4~6인분)로 주문하면 웨이팅 15~20분. 직원 손짓으로 주문 가능.",
     reservationInfo: {
       methods: ["현장 대기 (선착순)"],
-      timing: "11/1(토) 점심 11:30~13:00 또는 저녁 5:30~7:30",
+      timing: "11/1(토) 점심 11:30~13:00 또는 저녁 5:30~7:30"
     },
-    menu: [
-      { name: "타코야키 16구 세트", price: "¥850~950" },
-      { name: "카라아게 치킨", price: "¥700" },
-      { name: "사케(국산·잔)", price: "¥600~900" }
-    ],
+    specialties: ["타코야키 16구 세트 ¥850~950", "카라아게 치킨 ¥700", "사케(국산·잔) ¥600~900"],
     pricePerPerson: "인당 ¥700~1,200 (약 ₩7,000~12,000)",
     waiting: "피크(11:30~13:00 / 5:30~7:30PM) 15~20분, 그 외 0~10분",
     walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 니시키_market 방면 도보 6분 → 15"
@@ -609,17 +603,14 @@ export const GOURMET_RESTAURANTS = [
     type: "이자카야·스케워",
     location: "우라난바(난바역 서측), 도보 10분",
     day: 1,
+    mealType: "1일차 저녁 (디너)",
     reservationRequired: "권장 · 현장 가능",
     recommendation: "난바역 뒤쪽 로컬 이자카야 거리의 전형. 야키토리(닭꼬치)·아게하미(소고기 양지)·사시미 3종 세트. 사진 기반 메뉴로 주문 가능. 저녁 18:00~21:00 사이 대기 10~15분.",
     reservationInfo: {
       methods: ["현장 (바 좌석 선착순)", "Tabelog 예약 (테이블)"],
       timing: "11/1(토) 저녁 6:00~9:00 권장"
     },
-    menu: [
-      { name: "야키토리(닭꼬치) 3병", price: "¥1,050~1,350" },
-      { name: "아게하미(소고기 양지)", price: "¥1,200" },
-      { name: "사시미 플레이트", price: "¥1,800" }
-    ],
+    specialties: ["야키토리(닭꼬치) 3병 ¥1,050~1,350", "아게하미(소고기 양지) ¥1,200", "사시미 플레이트 ¥1,800"],
     pricePerPerson: "인당 ¥3,500~5,000 (약 ₩35,000~50,000)",
     waiting: "저녁 18:00~21:00 10~15분 대기(바 좌석 즉시 가능)",
     walkFromHotel: "HOTEL AMANEK → 난바역 서측 출구 → 우라난바 대로변 도보 10분 → 이자카야"
@@ -631,16 +622,14 @@ export const GOURMET_RESTAURANTS = [
     type: "스시·스몰플레이트",
     location: "난바 슥스나시장 입구, Namba Station 도보 8분",
     day: 2,
+    mealType: "2일차 점심 (런치)",
     reservationRequired: "불필요 · 현장 대기",
     recommendation: "스시 전문점 중 '신선·가성비' 두 토끼를 잡은 적. 스시 10점(¥4,500) 또는 사시미+스시 세트(¥6,500). 웨이팅 15~20분. 사진 메뉴 주문 가능.",
     reservationInfo: {
       methods: ["현장 대기 (선착순)"],
       timing: "11/1(토) 점심 11:30~13:30 또는 저녁 5:30~7:30"
     },
-    menu: [
-      { name: "스시 세트(10점)", price: "¥4,500~6,500" },
-      { name: "사시미 플레이트", price: "¥1,500~1,800" }
-    ],
+    specialties: ["스시 세트(10점) ¥4,500~6,500", "사시미 플레이트 ¥1,500~1,800"],
     pricePerPerson: "인당 ¥4,000~7,000 (약 ₩40,000~70,000)",
     waiting: "피크 15~20분, 그 외 0~10분",
     walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 슥스나시장 방면 도보 8분 → 스시 단"
@@ -652,17 +641,14 @@ export const GOURMET_RESTAURANTS = [
     type: "매차·와가시",
     location: "기온·스이쇼인 방면, 도보 12분",
     day: 2,
+    mealType: "2일차 디저트 (카페)",
     reservationRequired: "불필요 · 현장",
     recommendation: "기온 골목 안의 매차 전문 카페. 매차 라떼(¥800)·과일 다후쿠(¥1,000)·호지차(¥600). 100% 비건 옵션 가능. 10~15분 대기. 사진 메뉴. 비비권 추천(고기와 생선이 없는 식사).",
     reservationInfo: {
       methods: ["현장"],
       timing: "11/1(토) 오후 14:00~16:00 권장"
     },
-    menu: [
-      { name: "매차 라떼", price: "¥800" },
-      { name: "과일 다후쿠(당일)", price: "¥1,000~1,200" },
-      { name: "호지차", price: "¥600" }
-    ],
+    specialties: ["매차 라떼 ¥800", "과일 다후쿠(당일) ¥1,000~1,200", "호지차 ¥600"],
     pricePerPerson: "인당 ¥2,000~4,000 (약 ₩20,000~40,000)",
     waiting: "오전 10:00~12:00 또는 오후 14:00~16:00 0~10분",
     walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 기온역(지하철 5분) → 도보 12분 → 매차 카페"
@@ -674,17 +660,14 @@ export const GOURMET_RESTAURANTS = [
     type: "정진요리(비건)·매차",
     location: "부지미 이나리대사 상단, 도보 30분",
     day: 3,
+    mealType: "3일차 점심 (런치)",
     reservationRequired: "권장 · 온라인",
     recommendation: "부지미 이나리대사 산책길 상단의 정진요리 전문. 100% 비건+매주 세트(¥4,500~6,500)·미타라시 단고(¥800)·와라비모치(¥600). 산책 후 점심/마지막 식사로 최적. 20~30분 대기.",
     reservationInfo: {
       methods: ["현장 대기", "Tabelog 예약 (선택)"],
       timing: "11/2(일) 오후 13:00~15:00 (이나리대사 산책 후) 권장"
     },
-    menu: [
-      { name: "정진요리 세트(8코스)", price: "¥4,500~6,500" },
-      { name: "미타라시 단고", price: "¥800" },
-      { name: "매차 라떼(식물유)", price: "¥700" }
-    ],
+    specialties: ["정진요리 세트(8코스) ¥4,500~6,500", "미타라시 단고 ¥800", "매차 라떼(식물유) ¥700"],
     pricePerPerson: "인당 ¥4,000~7,000 (약 ₩40,000~70,000)",
     waiting: "점심 11:30~13:30 또는 오후 14:00~15:30 15~30분",
     walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 이나리역(교토모노레일 15분) → 도보 30분 → 정진요리"
@@ -696,17 +679,14 @@ export const GOURMET_RESTAURANTS = [
     type: "카페·파블로바",
     location: "부지미 이나리대사 하단, 도보 10분",
     day: 3,
+    mealType: "3일차 디저트 (카페)",
     reservationRequired: "불필요 · 현장",
     recommendation: "이나리대사 하단(산책 전/후) 카페. 인아리 파블로바(¥1,400)·호지차 라떼(¥700)·매차 소프트서브(¥500). 고니·도토리 디자인 웨어. 산책길 중간 휴식으로 완벽 100% 비건 옵션.",
     reservationInfo: {
       methods: ["현장"],
       timing: "11/2(일) 오후 14:00~16:00 (이나리대사 산책 후)"
     },
-    menu: [
-      { name: "이나리 파블로바", price: "¥1,400" },
-      { name: "매차 라떼", price: "¥800" },
-      { name: "매차 소프트서브", price: "¥500" }
-    ],
+    specialties: ["이나리 파블로바 ¥1,400", "매차 라떼 ¥800", "매차 소프트서브 ¥500"],
     pricePerPerson: "인당 ¥1,500~3,000 (약 ₩15,000~30,000)",
     waiting: "10:00~14:00 또는 14:00~16:00 0~10분",
     walkFromHotel: "HOTEL AMANEK → 난바역 → 이나리역(교토모노레일 15분) → 도보 10분 → 카페"
@@ -718,6 +698,7 @@ export const GOURMET_RESTAURANTS = [
     type: "카이세키(코스요리)",
     location: "니닌조(교토성) 남측, 도보 10분",
     day: 3,
+    mealType: "3일차 저녁 (디너)",
     reservationRequired: "필수 · 온라인",
     recommendation: "니닌조(교토성) 근처 로컬 카이세키. 경량 카이세키(8코스 ¥8,000~10,000)·템푸라 플레이트(¥2,500)·사시미(¥1,500). 45분 대기. 사진 메뉴. 예약 2~3일 전 권장.",
     reservationInfo: {
@@ -725,11 +706,7 @@ export const GOURMET_RESTAURANTS = [
       timing: "11/2(일) 저녁 5:30~8:00 (해질녘 니닌조 조망) 권장",
       phone: "075-231-XXXX"
     },
-    menu: [
-      { name: "경량 카이세키(8코스)", price: "¥8,000~10,000" },
-      { name: "템푸라 플레이트", price: "¥2,500" },
-      { name: "사시미(당일)", price: "¥1,500" }
-    ],
+    specialties: ["경량 카이세키(8코스) ¥8,000~10,000", "템푸라 플레이트 ¥2,500", "사시미(당일) ¥1,500"],
     pricePerPerson: "인당 ¥6,000~10,000 (약 ₩60,000~100,000)",
     waiting: "저녁 17:30~19:00 20~40분(예약 시 즉시 가능)",
     walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 니닌조역(지하철 10분) → 도보 10분 → 카이세키"
@@ -741,17 +718,14 @@ export const GOURMET_RESTAURANTS = [
     type: "오코노미야끼·테판요리",
     location: "난바 미스지쥬 1-초메, Namba Station 도보 4분",
     day: 4,
+    mealType: "4일차 점심 (런치)",
     reservationRequired: "권장 · 현장 가능",
     recommendation: "도톤보리 메인 스트리트의 두 번째 오코노미야끼 전문점. 미스지쥬 스타일(쫀득·층층이) 특종. 1인용 판에 직접 구워 먹으면 웨이팅 20~30분. 사진 기반 메뉴. 웨이팅 피크 5:30~7:30PM.",
     reservationInfo: {
       methods: ["현장 대기 (선착순)", "Tabelog 예약 (테이블)"],
       timing: "11/3(월) 점심 11:30~13:30 또는 저녁 5:30~7:30"
     },
-    menu: [
-      { name: "오코노미야끼(우천)", price: "¥2,800~4,200" },
-      { name: "오코노미야끼(채소)", price: "¥2,200" },
-      { name: "카기아게 치킨", price: "¥1,200" }
-    ],
+    specialties: ["오코노미야끼(우천) ¥2,800~4,200", "오코노미야끼(채소) ¥2,200", "카기아게 치킨 ¥1,200"],
     pricePerPerson: "인당 ¥2,500~4,500 (약 ₩25,000~45,000)",
     waiting: "피크(5:30~7:30PM) 20~30분, 그 외 0~15분",
     walkFromHotel: "HOTEL AMANEK → 난바역 서측 출구 → 미스지쥬 1-초메 도보 4분 → 오코노미야끼 2"
@@ -763,16 +737,14 @@ export const GOURMET_RESTAURANTS = [
     type: "스시·스몰플레이트",
     location: "도톤보리 남측, Namba Station 도보 8분",
     day: 4,
+    mealType: "4일차 점심 (런치)",
     reservationRequired: "불필요 · 현장",
     recommendation: "도톤보리 메인 스트리트의 스시 전문점. 스시 10점(¥4,500~6,500)·사시미 플레이트(¥1,800). 사진 메뉴. 웨이팅 15~20분. 100% 비건 옵션 없음.",
     reservationInfo: {
       methods: ["현장 대기 (선착순)"],
       timing: "11/3(월) 점심 11:30~13:30 또는 저녁 5:30~7:30"
     },
-    menu: [
-      { name: "스시 세트(10점)", price: "¥4,500~6,500" },
-      { name: "사시미 플레이트", price: "¥1,800" }
-    ],
+    specialties: ["스시 세트(10점) ¥4,500~6,500", "사시미 플레이트 ¥1,800"],
     pricePerPerson: "인당 ¥4,000~7,000 (약 ₩40,000~70,000)",
     waiting: "피크 15~20분, 그 외 0~10분",
     walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 도톤보리 방면 도보 8분 → 스시"
@@ -784,17 +756,14 @@ export const GOURMET_RESTAURANTS = [
     type: "야키킥(소고기)·테판요리",
     location: "난바 또는 신사이바시, Namba Station 도보 10분",
     day: 5,
+    mealType: "5일차 저녁 (디너 피날레)",
     reservationRequired: "권장 · 온라인",
     recommendation: "마지막 오사카 식사로 최적. 와규 야키킥(소고기 구이) 세트(¥5,000~8,000)·템푸라(¥800)·사케(¥700~1,200). 사진 메뉴. 웨이팅 15~30분. 예약 1~2일 전 권장.",
     reservationInfo: {
       methods: ["Tabelog 예약 (권장)", "현장 (바 좌석)"],
       timing: "11/4(화) 저녁 6:00~9:00 (공항 이동 전) 권장"
     },
-    menu: [
-      { name: "와규 야키킥 세트", price: "¥5,000~8,000" },
-      { name: "템푸라", price: "¥800" },
-      { name: "사케(국산·잔)", price: "¥700~1,200" }
-    ],
+    specialties: ["와규 야키킥 세트 ¥5,000~8,000", "템푸라 ¥800", "사케(국산·잔) ¥700~1,200"],
     pricePerPerson: "인당 ¥5,000~9,000 (약 ₩50,000~90,000)",
     waiting: "저녁 18:00~20:00 15~30분, 예약 시 즉시 가능",
     walkFromHotel: "HOTEL AMANEK → 난바역 → 신사이바시 방면 도보 10분 → 와규 야키킥"
