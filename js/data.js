@@ -8,11 +8,23 @@ export const TRIP_META = {
   startDate: "2026-10-31T16:35:00+09:00",
   endDate: "2026-11-04T11:45:00+09:00",
   duration: "4박 5일",
-  baseLocation: "오사카 난바 · 도톤보리 인근",
+  baseLocation: "오사카 난바 HOTEL AMANEK Osaka Namba (ホテルアマネク大阪なんば)",
+  hotel: {
+    name: "HOTEL AMANEK Osaka Namba",
+    japaneseName: "ホテルアマネク大阪なんば",
+    starRating: 4,
+    address: "오사카부 오사카시 주오구 센니치마에 1-9-7 (542-0074)",
+    checkIn: "15:00",
+    checkOut: "11:00",
+    distance: "난바역 도보 5분 / 니혼바시역 도보 2분 / 도톤보리 도보 3분",
+    features: ["무료 Wi-Fi", "세탁실(동전)", "짐 보관", "24시간 프론트", "드라이룸"],
+    officialUrl: "https://en.amanekhotels.jp/osaka-namba/",
+    phone: "+81-6-6732-8190"
+  },
   defaultExchangeRate: 9.15, // 100 JPY = 915 KRW 기준 (1 JPY = 9.15 KRW)
-  lastUpdated: "2026-09-27T15:30:00+09:00",
+  lastUpdated: "2026-09-27T16:00:00+09:00",
   updatedDate: "2026-09-27",
-  updatedTime: "15:30"
+  updatedTime: "16:00"
 };
 
 export const ITINERARY_DAYS = [
@@ -48,7 +60,7 @@ export const ITINERARY_DAYS = [
         time: "18:30 ~ 19:00",
         title: "호텔 체크인 & 짐 정리",
         category: "hotel",
-        desc: "난바/도톤보리 도보권 숙소 체크인 및 가벼운 외출 준비",
+        desc: "HOTEL AMANEK Osaka Namba 체크인 (도톤보리 도보권)",
         badge: "체크인"
       },
       {
@@ -543,7 +555,7 @@ export const TRANSIT_GUIDE = [
 
 export const DEFAULT_BUDGET_ITEMS = [
   { id: "flight", name: "왕복 항공권 (인천 ↔ 간사이)", category: "항공", costJpy: 35000, costKrw: 320000, isPerPerson: true },
-  { id: "hotel", name: "난바 호텔 숙박비 (4박)", category: "숙박", costJpy: 80000, costKrw: 730000, isPerPerson: false },
+  { id: "hotel", name: "HOTEL AMANEK Osaka Namba 숙박비 (4박)", category: "숙박", costJpy: 80000, costKrw: 730000, isPerPerson: false },
   { id: "rapit", name: "난카이 라피트 왕복 티켓", category: "교통", costJpy: 2900, costKrw: 26500, isPerPerson: true },
   { id: "transit-local", name: "교토/USJ/시내 교통비", category: "교통", costJpy: 3800, costKrw: 34800, isPerPerson: true },
   { id: "usj-pass", name: "USJ 버스데이 1데이 패스 (공홈 다이렉트 인)", category: "관광", costJpy: 9000, costKrw: 82000, isPerPerson: true },
