@@ -348,7 +348,7 @@ class OsakaTripApp {
                         </div>
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">💰 가격대</span>
-                          <span class="font-mono text-emerald-400 font-semibold">${res.priceRange}</span>
+                          <span class="font-mono text-emerald-400 font-semibold">${res.priceRange || res.pricePerPerson}</span>
                           <span class="text-slate-500 block">1인당 기준</span>
                         </div>
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
@@ -456,7 +456,7 @@ class OsakaTripApp {
           </div>
           <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
             <span class="text-xs font-bold text-slate-400 block mb-2">💰 1인당 가격대</span>
-            <span class="text-xl font-mono font-bold text-emerald-400 mt-1 block">${res.priceRange}</span>
+            <span class="text-xl font-mono font-bold text-emerald-400 mt-1 block">${res.priceRange || res.pricePerPerson}</span>
           </div>
           <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
             <span class="text-xs font-bold text-slate-400 block mb-2">⭐ 구글 평점</span>

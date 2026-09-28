@@ -22,9 +22,9 @@ export const TRIP_META = {
     phone: "+81-6-6732-8190"
   },
   defaultExchangeRate: 9.15, // 100 JPY = 915 KRW 기준 (1 JPY = 9.15 KRW)
-  lastUpdated: "2026-09-28T13:43:00+09:00",
+  lastUpdated: "2026-09-28T15:26:00+09:00",
   updatedDate: "2026-09-28",
-  updatedTime: "13:43"
+  updatedTime: "15:26"
 };
 
 export const ITINERARY_DAYS = [
@@ -767,6 +767,63 @@ export const GOURMET_RESTAURANTS = [
     pricePerPerson: "인당 ¥5,000~9,000 (약 ₩50,000~90,000)",
     waiting: "저녁 18:00~20:00 15~30분, 예약 시 즉시 가능",
     walkFromHotel: "HOTEL AMANEK → 난바역 → 신사이바시 방면 도보 10분 → 와규 야키킥"
+  },
+  {
+    id: "okonomiyaki-ajinoya",
+    name: "아지노야 본점 (味乃家)",
+    japaneseName: "あじのや 本店",
+    type: "오코노미야끼·야키소바 (오사카 가부키)",
+    location: "난바 1-7-16, 도톤보리 가와자키 선창 근처",
+    day: 1,
+    mealType: "1일차 저녁 대안 / 2000엔 이하 가성비 오코노미야끼",
+    reservationRequired: "불필요 · 현장 (웨이팅 있음)",
+    recommendation: "1965년 창업, 4대째 이어온 노포. 오코노미야끼 1장당 ¥1,500~2,000(도톤보리 기준)으로 와규 정식보다 부담 적고, 현지인들이 줄 서는 오사카 부침개 명당. 미슐랭 빕구르망 등재.",
+    reservationInfo: {
+      methods: ["현장 발권 (카운터에서 번호표)"],
+      timing: "저녁 17:30~19:00 피크 시 30~60분 대기"
+    },
+    specialties: ["오코노미야끼 ¥1,500~2,000/장", "야키소바 ¥1,200~1,500", "카기아게 ¥1,000"],
+    priceRange: "인당 ¥2,000~3,000",
+    waiting: "저녁 피크 30~60분, 평일 낮 10분 이내",
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 도톤보리 가와자키 다리 인근"
+  },
+  {
+    id: "takoyaki-ootako",
+    name: "혼케 오오타코 도톤보리점 (本家 大たこ)",
+    japaneseName: "本家 大たこ 道頓堀店",
+    type: "타코야끼 (도톤보리 상징)",
+    location: "난바 1-8-12, 도톤보리 메인 거리 (곤도로봇 맞은편)",
+    day: 1,
+    mealType: "1일차 스낵 / 2,000엔 이하",
+    reservationRequired: "불필요 · 현장 (웨이팅 필수)",
+    recommendation: "1972년 창업, 거대한 먹물 타코가 꽉 찬 타코야기로 유명. 2026년 가격 6개 ¥720 / 10개 ¥1,200. 도톤보리 랜드마크 같은 간판 옆에서 반드시 한 번. 줄 서도 15~25분.",
+    reservationInfo: {
+      methods: ["현장 대기 (번호표)"],
+      timing: "16:00~19:00 15~25분 대기"
+    },
+    specialties: ["타코야끼 6개 ¥720", "타코야끼 10개 ¥1,200", "다시·계란 추가 무료"],
+    priceRange: "인당 ¥700~1,500",
+    waiting: "저녁 15~25분, 오전은 거의 없음",
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 도톤보리 메인 거리 걸어서 5분"
+  },
+  {
+    id: "okonomiyaki-dohtonbori",
+    name: "도톤보리 오사카 본점 (道とん堀)",
+    japaneseName: "道とん堀 大阪本店",
+    type: "오코노미야끼·몽야야키 (자율 테이블요리)",
+    location: "난바 2-4-1, 오사카 성전철 교토선 난바역 직결",
+    day: 2,
+    mealType: "2일차 점심 대안 / 2,000엔 이하 자율 코스로",
+    reservationRequired: "선택 ·tabelog / 현장",
+    recommendation: "자율 테이블요리(스스로 굽기)로 1인당 ¥1,500~2,000면 다양한 오코노미야끼·몽야·사이드를 즐길 수 있어 가격 대비 만족도 최고. 점심 한정 ¥550부터 메뉴도 있음. 웨이팅 최소화: 오후 2~4시 또는 10시 오픈런.",
+    reservationInfo: {
+      methods: ["Tabelog 예약", "현장 (바/테이블)"],
+      timing: "점심 11:30~14:00, 저녁 17:00~20:00"
+    },
+    specialties: ["오코노미야끼 ¥800~1,500/장", "몽야야키 ¥700~1,200", "라멘 ¥800~1,000"],
+    priceRange: "인당 ¥1,500~2,500 (자율 코스)",
+    waiting: "저녁 20~40분, 피크 시간대 제외 시 10분 이내",
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 오사카 성전철 난바역 도보 3분"
   }
 ];
 
