@@ -396,7 +396,7 @@ class OsakaTripApp {
     if (info.timing) { if (out) out += `<hr class="border-slate-700/50 my-2">`; out += `<div class="flex items-start gap-2"><span class="text-rose-400 shrink-0">⏰</span><span class="text-slate-200">${info.timing}</span></div>`; }
     if (info.phone) { if (out) out += `<div class="flex items-start gap-2 mt-1.5"><span class="text-rose-400 shrink-0">📞</span><span class="text-slate-200">${info.phone}</span></div>`; }
     return out;
-  },
+  }
 
   showRestaurantDetail(id) {
     const res = GOURMET_RESTAURANTS.find(r => r.id === id);
