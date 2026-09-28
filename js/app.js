@@ -320,7 +320,7 @@ class OsakaTripApp {
                             ${res.reservationRequired}
                           </span>
                           <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                            ★ ${res.rating}
+                            ★ ${res.rating ?? "신규"}
                           </span>
                         </div>
                       </div>
@@ -357,7 +357,7 @@ class OsakaTripApp {
                         </div>
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">📍 주소</span>
-                          <span>${res.address}</span>
+                          <span>${res.address || res.location || '정보 없음'}</span>
                         </div>
                         ${res.googleMapUrl ? `
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
@@ -461,8 +461,8 @@ class OsakaTripApp {
           <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
             <span class="text-xs font-bold text-slate-400 block mb-2">⭐ 구글 평점</span>
             <div class="flex items-center gap-2 mt-1">
-              <span class="text-xl font-black text-amber-400">${res.rating}</span>
-              <span class="text-xs text-slate-400">(${res.reviewsCount} 리뷰)</span>
+              <span class="text-xl font-black text-amber-400">${res.rating ?? "신규"}</span>
+              <span class="text-xs text-slate-400">(${res.reviewsCount ?? 0} 리뷰)</span>
             </div>
           </div>
         </div>
