@@ -344,7 +344,7 @@ class OsakaTripApp {
                         </div>
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">⭐ 대표 메뉴</span>
-                          ${res.specialties.map(d => `<span class="block text-slate-200 pl-4">• ${d}</span>`).join('')}
+                          ${(res.specialties || []).map(d => `<span class="block text-slate-200 pl-4">• ${d}</span>`).join('') || '<span class="text-slate-500">정보 없음</span>'}
                         </div>
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">💰 가격대</span>
@@ -374,7 +374,7 @@ class OsakaTripApp {
                           <a href="${res.reservationUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3.5 py-2 rounded-lg bg-pink-600 hover:bg-pink-500 text-white flex items-center gap-1.5 shadow-md shadow-pink-500/20">
                             📅 예약 사이트 바로가기
                           </a>
-                          <span class="text-xs text-slate-500">${res.specialties[0]}</span>
+                          <span class="text-xs text-slate-500">${(res.specialties && res.specialties[0]) || ''}</span>
                         </div>` : ''}
                     </div>
                   `;
