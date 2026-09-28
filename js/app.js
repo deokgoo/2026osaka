@@ -340,7 +340,7 @@ class OsakaTripApp {
                       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">📋 예약 정보</span>
-                          ${window.osakaApp.formatReservation(res.reservationInfo)}
+                          ${this.formatReservation(res.reservationInfo)}
                         </div>
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">⭐ 대표 메뉴</span>
@@ -448,7 +448,7 @@ class OsakaTripApp {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
             <span class="text-xs font-bold text-slate-400 block mb-2">📋 예약 정보</span>
-            <p class="text-sm text-slate-200 leading-relaxed">${window.osakaApp.formatReservation(res.reservationInfo)}</p>
+            <p class="text-sm text-slate-200 leading-relaxed">${this.formatReservation(res.reservationInfo)}</p>
           </div>
           <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
             <span class="text-xs font-bold text-slate-400 block mb-2">⏱️ 웨이팅</span>
