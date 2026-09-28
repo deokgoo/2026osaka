@@ -299,7 +299,7 @@ class OsakaTripApp {
                 <span class="text-xs text-slate-500">${dayGroups[dayKey].length}곳 추천</span>
               </div>
 
-              <div class="space-y-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 ${dayGroups[dayKey].map(res => {
                   const resBadgeClass = res.reservationRequired.includes('필수')
                     ? 'bg-rose-500/15 text-rose-400 border-rose-500/30'
@@ -308,14 +308,14 @@ class OsakaTripApp {
                       : 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
 
                   return `
-                    <div class="rounded-2xl p-5 md:p-6 border border-slate-800/80 bg-slate-900/60 hover:border-pink-500/30 transition-all duration-300 space-y-4 group">
+                    <div class="rounded-2xl p-5 xl:p-6 border border-slate-800/80 bg-slate-900/60 hover:border-pink-500/30 transition-all duration-300 space-y-4 group flex flex-col">
                       <!-- Header -->
-                      <div class="flex flex-col md:flex-row md:items-start justify-between gap-3">
+                      <div class="flex flex-col xl:flex-row xl:items-start justify-between gap-3">
                         <div class="space-y-1">
                           <h4 class="text-lg font-bold text-white group-hover:text-pink-300 transition-colors">${res.name}</h4>
                           <p class="text-xs text-slate-400 font-japanese">${res.japaneseName}</p>
                         </div>
-                        <div class="flex items-center gap-2 flex-wrap">
+                        <div class="flex items-center gap-2 flex-wrap shrink-0">
                           <span class="text-xs font-bold px-2.5 py-1 rounded-lg ${resBadgeClass} border">
                             ${res.reservationRequired}
                           </span>
@@ -326,7 +326,7 @@ class OsakaTripApp {
                       </div>
 
                       <!--推荐理由 + Walking from hotel -->
-                      <div class="space-y-2">
+                      <div class="grid grid-cols-1 xl:grid-cols-2 gap-3">
                         <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
                           ${typeof res.recommendation === 'string' ? `<span class="text-pink-400 shrink-0 mt-0.5">💡</span><span><span class="font-bold text-slate-200">추천 사유: </span>${res.recommendation}</span>` : `<span class="text-pink-400 shrink-0 mt-0.5">💡</span><span>${res.recommendation[0] || ''}</span>`}
                         </div>
@@ -337,7 +337,7 @@ class OsakaTripApp {
                       </div>
 
                       <!-- Info Grid -->
-                      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+                      <div class="grid grid-cols-2 xl:grid-cols-3 gap-3 text-xs">
                         <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 space-y-1">
                           <span class="text-slate-500 flex items-center gap-1.5">📋 예약 정보</span>
                           ${this.formatReservation(res.reservationInfo)}
