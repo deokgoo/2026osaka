@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 오사카·교토 일정 검증 리포트</title>
+  <meta name="description" content="2026 오사카·교토 4박 5일 일정의 식당 영업일·주소·USJ 패스·동선을 웹 검색으로 검증한 리포트. 출처와 이유를 명시.">
+  <meta property="og:title" content="2026 오사카·교토 일정 검증 리포트">
+  <meta property="og:description" content="식당 영업일·주소·USJ 패스·동선 검증 리포트 (출처 명시)">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { brand: { pink:'#f43f5e', rose:'#e11d48', cyan:'#06b6d4', gold:'#f59e0b', dark:'#070913' } } } }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="text-slate-100 antialiased selection:bg-pink-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white shadow-lg shadow-pink-500/20">
+          <i data-lucide="search-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <a href="index.html" class="font-display font-black text-lg md:text-xl tracking-tight text-white flex items-center gap-1.5">
+            <span>OSAKA</span><span class="text-pink-500 font-extrabold">&</span><span>KYOTO</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 ml-1">검증 리포트</span>
+          </a>
+          <p class="text-[10px] text-slate-400 hidden sm:block">일정 시뮬레이션 & 웹 검증</p>
+        </div>
+      </div>
+      <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white flex items-center gap-1.5">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span class="hidden sm:inline">메인 가이드</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- Hero -->
+    <section class="relative rounded-3xl overflow-hidden glass-panel border border-slate-800/80 p-8 md:p-12">
+      <div class="absolute inset-0 bg-gradient-to-r from-rose-950/40 via-purple-950/30 to-slate-950/60 -z-10"></div>
+      <div class="space-y-5">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700 text-xs text-amber-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+          <span>검증 기준일: 2026-10-07 · 대상: 2026.10.31(토) ~ 11.04(수)</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
+          일정 검증 리포트<br/><span class="gradient-text-pink">우려사항 & 개선안</span>
+        </h1>
+        <p class="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
+          4박 5일 일정을 시뮬레이션하고, 식당 영업일·주소·USJ 패스·동선을 웹 검색으로 검증했습니다.
+          모든 항목에 <strong class="text-amber-400">출처</strong>와 <strong class="text-amber-400">판단 이유</strong>를 명시했습니다.
+        </p>
+        <div class="flex items-center gap-2 text-xs text-slate-500 pt-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>검증 방법: 각 식당 공식 사이트 / Tabelog / USJ 공식 / 일본 공휴일 기준</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary verdict -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i data-lucide="gauge" class="w-6 h-6 text-pink-400"></i> 종합 판정
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="glass-card rounded-2xl p-5 border border-emerald-500/30 bg-emerald-950/20">
+          <div class="text-3xl font-black text-emerald-400">5/5</div>
+          <div class="text-sm font-bold text-slate-200 mt-1">영업일 OK</div>
+          <p class="text-xs text-slate-400 mt-2">5개 식당 모두 해당 날짜 영업 확인. 11/3(화·문화의날) 포함 무휴.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-5 border border-amber-500/30 bg-amber-950/20">
+          <div class="text-3xl font-black text-amber-400">3곳</div>
+          <div class="text-sm font-bold text-slate-200 mt-1">주소·전화 재확인 필요</div>
+          <p class="text-xs text-slate-400 mt-2">data.js의 주소/전화번호가 공식 사이트와 불일치 의심. 예약 전 재확인 권장.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-5 border border-cyan-500/30 bg-cyan-950/20">
+          <div class="text-3xl font-black text-cyan-400">해소</div>
+          <div class="text-sm font-bold text-slate-200 mt-1">USJ 생일패스</div>
+          <p class="text-xs text-slate-400 mt-2">연간패스 제외일(11/1~3)과 무관. 생일패스는 별도 상품이라 11/3 이용 가능.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Date / weekday -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i data-lucide="calendar" class="w-6 h-6 text-pink-400"></i> 1. 날짜·요일 검증
+      </h2>
+      <div class="glass-card rounded-2xl p-6 border border-slate-800/80 bg-slate-900/60">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-slate-400 text-xs uppercase tracking-wider border-b border-slate-800">
+              <th class="text-left py-2">날짜</th><th class="text-left">요일</th><th class="text-left">특이사항</th><th class="text-right">판정</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-200">
+            <tr class="border-b border-slate-800/50"><td class="py-2 font-mono">10/31</td><td>토</td><td>도착일 · 할로윈 주말</td><td class="text-right text-emerald-400">OK</td></tr>
+            <tr class="border-b border-slate-800/50"><td class="py-2 font-mono">11/01</td><td>일</td><td>교토 당일치기</td><td class="text-right text-emerald-400">OK</td></tr>
+            <tr class="border-b border-slate-800/50"><td class="py-2 font-mono">11/02</td><td>월</td><td>오사카</td><td class="text-right text-emerald-400">OK</td></tr>
+            <tr class="border-b border-slate-800/50"><td class="py-2 font-mono">11/03</td><td>화</td><td><strong class="text-amber-400">문화의 날(공휴일)</strong> · USJ</td><td class="text-right text-amber-400">주의</td></tr>
+            <tr><td class="py-2 font-mono">11/04</td><td>수</td><td>귀국일</td><td class="text-right text-emerald-400">OK</td></tr>
+          </tbody>
+        </table>
+        <div class="mt-4 text-xs text-slate-400 space-y-1">
+          <p><strong class="text-slate-300">출처:</strong> 시스템 캘린더 계산 (2026-11-03 = 화요일).</p>
+          <p><strong class="text-slate-300">이유:</strong> 일본 <strong>문화의 날은 11월 3일 고정</strong> 공휴일(제3월요일이 아님). 2026년 11/3은 화요일이지만 공휴일이므로 USJ·식당 혼잡도·예약 정책이 평일과 다름.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Restaurant verification -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i data-lucide="utensils" class="w-6 h-6 text-amber-400"></i> 2. 식당별 검증 (5곳)
+      </h2>
+      <div class="space-y-4" id="restaurant-verify"></div>
+    </section>
+
+    <!-- 3. USJ -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i data-lucide="ticket" class="w-6 h-6 text-cyan-400"></i> 3. USJ 11/3(화·문화의날)
+      </h2>
+      <div class="glass-card rounded-2xl p-6 border border-cyan-500/30 bg-cyan-950/20 space-y-3 text-sm text-slate-200">
+        <p><strong class="text-cyan-400">우려:</strong> 11/3이 공휴일이라 연간패스(Annual Pass)는 <strong>제외일(11/1~3)</strong>에 해당해 사용 불가.</p>
+        <p><strong class="text-emerald-400">판정: 해소.</strong> 예약에 쓴 <strong>생일패스(Birthday Pass)는 연간패스와 별개 상품</strong>으로, 공휴일 제외 대상이 아니므로 11/3 이용 가능.</p>
+        <div class="text-xs text-slate-400 pt-2 border-t border-slate-800 space-y-1">
+          <p><strong class="text-slate-300">출처:</strong> USJ 공식 <a class="text-cyan-400 underline" href="https://www.usj.co.jp/web/ja/jp/enjoy/birthday-pass" target="_blank" rel="noopener">birthday-pass</a> · <a class="text-cyan-400 underline" href="https://s.usj.co.jp/ticket/guide/birthday.html" target="_blank" rel="noopener">구매 가이드</a></p>
+          <p><strong class="text-slate-300">이유:</strong> 생일패스는 "생월+다음월 2개월" 특별가 1/2데이 패스. 연간패스의 공휴일 제외 조항은 적용되지 않음. 단, 11/3은 공휴일이라 <strong>혼잡 최고</strong> → 06:15 오픈런 + 익스프레스 권장.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Route / flow -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i data-lucide="route" class="w-6 h-6 text-purple-400"></i> 4. 동선·선택지 검토
+      </h2>
+      <div class="glass-card rounded-2xl p-6 border border-slate-800/80 bg-slate-900/60 space-y-3 text-sm text-slate-200">
+        <p><strong class="text-slate-300">숙소:</strong> HOTEL AMANEK 오사카 난바 (中央区千日前1-9-7, 난바역 도보 5분). <span class="text-amber-400">2025-12-15 리브랜드 오픈</span> — 예약 시 새 브랜드명 확인 필요.</p>
+        <p><strong class="text-slate-300">동선 판정: 유지 권장.</strong> 난바 기반 1박 → 교토 당일치기(후시미이나리→기요미즈→기온→산조) → 난바 복귀. 각 식당이 동선 끝자락에 위치해 이동 효율 양호.</p>
+        <p><strong class="text-amber-400">개선안:</strong> 11/3(공휴일) USJ + 저녁 쿠시카츠 다루마 동선은 피크 겹침. USJ 17:00 조기 퇴장 → 17:30~18:00 또는 20:30 이후 방문으로 대기 최소화.</p>
+        <div class="text-xs text-slate-400 pt-2 border-t border-slate-800">
+          <p><strong class="text-slate-300">출처:</strong> <a class="text-cyan-400 underline" href="https://amanekhotels.jp/osaka-namba/" target="_blank" rel="noopener">아마넥 공식</a> · <a class="text-cyan-400 underline" href="https://www.jalan.net/yad364153/access/" target="_blank" rel="noopener">JALAN(주소)</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Action items -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i data-lucide="list-checks" class="w-6 h-6 text-rose-400"></i> 5. 실행 체크리스트 (우선순위)
+      </h2>
+      <div class="glass-card rounded-2xl p-6 border border-rose-500/30 bg-rose-950/20 space-y-3 text-sm text-slate-200">
+        <ol class="space-y-2 list-decimal list-inside">
+          <li><strong class="text-rose-400">[긴급]</strong> Zin(고베규)·규카츠 교토가츠규·마츠자카규 M 3곳의 <strong>주소·전화번호를 공식 사이트로 재확인</strong> 후 data.js 수정.</li>
+          <li><strong class="text-amber-400">[중요]</strong> 11/3(공휴일) USJ 생일패스 구매 + 익스프레스. 연간패스 제외일과 혼동 주의.</li>
+          <li><strong class="text-amber-400">[중요]</strong> 치카라야마 스키야키(11/2)·Zin(11/4) 사전 예약 — 2~3주 전.</li>
+          <li><strong class="text-cyan-400">[참고]</strong> 숙소 예약 시 "호텔 아マネク大阪なんば" 새 브랜드명(2025-12 리브랜드)으로 검색.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i data-lucide="book-open" class="w-6 h-6 text-slate-400"></i> 출처 목록
+      </h2>
+      <div class="glass-card rounded-2xl p-6 border border-slate-800/80 bg-slate-900/60 text-xs text-slate-400 space-y-2">
+        <p>· 마츠자카규 M: <a class="text-cyan-400 underline" href="https://matsusaka-projects.com/shop/houzenji/" target="_blank" rel="noopener">matsusaka-projects.com/shop/houzenji</a></p>
+        <p>· 규카츠 교토가츠규: <a class="text-cyan-400 underline" href="https://gyukatsu-kyotokatsugyu.com/store/sanjo-kawaramachi" target="_blank" rel="noopener">gyukatsu-kyotokatsugyu.com/store/sanjo-kawaramachi</a></p>
+        <p>· USJ 생일패스: <a class="text-cyan-400 underline" href="https://www.usj.co.jp/web/ja/jp/enjoy/birthday-pass" target="_blank" rel="noopener">usj.co.jp/.../birthday-pass</a></p>
+        <p>· HOTEL AMANEK: <a class="text-cyan-400 underline" href="https://amanekhotels.jp/osaka-namba/" target="_blank" rel="noopener">amanekhotels.jp/osaka-namba</a> · <a class="text-cyan-400 underline" href="https://www.jalan.net/yad364153/access/" target="_blank" rel="noopener">jalan.net/yad364153</a></p>
+        <p>· 일본 공휴일: 문화의 날 = 11월 3일 고정 (정부 기준)</p>
+        <p class="text-slate-500 pt-2">※ 영업시간·주소는 시점에 따라 변동 가능. 출발 2주 전 재확인을 권장합니다.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800/80 bg-slate-950/80 mt-20 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+        <span class="text-slate-400 font-medium">2026 Osaka & Kyoto — 검증 리포트</span>
+      </div>
+      <p>© 2026 Osaka Trip Planner.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Restaurant verification cards
+    const R = [
+      {
+        name: "마츠자카규 M (호젠지요코초점)", jp: "松阪牛焼肉 M 法善寺横丁店",
+        day: "1일차 저녁 (10/31 토)", status: "ok",
+        hours: "17:00~24:00 (토·일·祝 +런치 12:00~15:00) · 무휴",
+        verdict: "10/31(토) 저녁 영업 OK",
+        risk: "주소·전화 재확인: data.js=난바 1-1-19 / 06-6211-6464. 공식 사이트와 대조 필요.",
+        src: "matsusaka-projects.com/shop/houzenji"
+      },
+      {
+        name: "규카츠 교토가츠규 (산조가와라마치점)", jp: "牛カツ京都勝牛 三条河原町店",
+        day: "2일차 점심 (11/1 일)", status: "ok",
+        hours: "10:30~22:30 · 무휴",
+        verdict: "11/1(일) 점심 영업 OK",
+        risk: "주소·전화 재확인: data.js=中島町73-2 / 075-255-6622. 공식 사이트와 대조 필요.",
+        src: "gyukatsu-kyotokatsugyu.com/store/sanjo-kawaramachi"
+      },
+      {
+        name: "와규 스키야키 치카라야마 (난바1호점)", jp: "和牛すき焼き 京都力山 難波1号店",
+        day: "2일차 저녁 (11/2 월)", status: "ok",
+        hours: "11:30~15:00 / 17:00~23:00 · 무휴",
+        verdict: "11/2(월) 저녁 영업 OK",
+        risk: "사전 예약 필수(만석 잦음). 18:30~19:00 타임 권장.",
+        src: "site.locaop.jp/mIrtf"
+      },
+      {
+        name: "쿠시카츠 다루마 (도톤보리점)", jp: "串かつだるま 道頓堀店",
+        day: "3일차 저녁 (11/3 화·공휴일)", status: "warn",
+        hours: "140석 · 빠른 회전 · 예약 불필요(2인+ 전화 가능, 평일 18시까지)",
+        verdict: "11/3(공휴일) 영업 OK — 단, 예약 미수리(토·일·공휴일)",
+        risk: "공휴일이라 전화 예약 불가 → 현장 대기. 17:30~18:00 또는 20:30 이후 방문 권장.",
+        src: "kushikatu-daruma.com/location/doutonbori"
+      },
+      {
+        name: "고베규 스테이크 Zin (난바점)", jp: "神戸牛ステーキ 鉄板焼 仁 難波店",
+        day: "4일차 저녁 (11/4 수)", status: "warn",
+        hours: "전석 예약제 · 11/1 신규 오픈",
+        verdict: "11/4(수) 영업 OK — 예약 필수",
+        risk: "주소 불일치 의심: data.js=난바 1-4-6 / 06-6631-1941. 공식 사이트(フルーツタワービル)와 재확인 필수. 신규점이라 예약 경쟁 치열.",
+        src: "tablecheck.com (공식 재확인 필요)"
+      }
+    ];
+    const badge = { ok: ["bg-emerald-500/20 text-emerald-400 border-emerald-500/30","OK"], warn: ["bg-amber-500/20 text-amber-400 border-amber-500/30","주의"] };
+    const el = document.getElementById("restaurant-verify");
+    el.innerHTML = R.map(r => {
+      const [cls, label] = badge[r.status];
+      return `<div class="glass-card rounded-2xl p-5 border border-slate-800/80 bg-slate-900/60 space-y-2">
+        <div class="flex items-start justify-between gap-3 flex-wrap">
+          <div>
+            <div class="font-bold text-slate-100">${r.name} <span class="text-slate-500 text-xs font-normal">${r.jp}</span></div>
+            <div class="text-xs text-slate-400 mt-0.5">${r.day}</div>
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-bold border ${cls}">${label}</span>
+        </div>
+        <div class="text-sm text-slate-300"><span class="text-slate-500 text-xs">영업</span> ${r.hours}</div>
+        <div class="text-sm text-slate-200"><span class="text-slate-500 text-xs">판정</span> ${r.verdict}</div>
+        <div class="text-xs text-amber-300/90"><span class="text-slate-500">리스크</span> ${r.risk}</div>
+        <div class="text-xs text-slate-500 pt-1 border-t border-slate-800">출처: ${r.src}</div>
+      </div>`;
+    }).join("");
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
+</html>
