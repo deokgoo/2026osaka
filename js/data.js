@@ -1510,6 +1510,28 @@ export const GOURMET_RESTAURANTS_FINAL = [
     proTip: "해산물 코스(4,500엔)로 다양한 오사카 맛을 한 번에. USJ에서 도보 15분.",
     recommendation: "5일차 저녁으로 USJ 방문 후. 덴포산 파노라마관 근처.",
     reservationInfo: { required: false, method: "전화 예약 권장", website: "", phone: "06-6576-0088", hours: "17:00 ~ 23:00", closed: "매월 넷째 화요일" }
+  },
+  {
+    id: "sakana-no-meshiya-tenba",
+    name: "사카나노메시야 텐바",
+    japaneseName: "さかなめし屋 天波",
+    day: 5,
+    mealType: "5일차 저녁 (디너)",
+    category: "이자카야",
+    type: "와라야키 + 해산물",
+    rating: 3.55,
+    reviewsCount: "1,228",
+    pricePerPerson: "1,000 ~ 1,999 JPY",
+    location: "오사카부 오사카시 아베노구 아베노역 직결 아베노 워크 1F",
+    address: "大阪府大阪市阿倍野区阿倍野筋1-6-1 ヴィアあべのウォーク 1F 121",
+    googleMapUrl: "https://tabelog.com/kr/osaka/A2701/A270203/27140502/",
+    reservationUrl: "https://tabelog.com/kr/osaka/A2701/A270203/27140502/",
+    reservationRequired: "불필요",
+    specialties: ["도미네기 펀치", "와라야키 (짚불 구이)", "모둠 해산물"],
+    description: "아베노역 직결 아베노 워크 1F. 와라야키(짚불 구이)의 향과 오픈 키친의 생동감이 매력적인 이자카야. 도미에 쪽파를 올린 도미네기 펀치가 시그니처.",
+    proTip: "도미네기 펀치(에히메현산 도미 + 코네기 + 폰즈 소스)가 베스트. 1,000~2,000엔대로 부담 없이.",
+    recommendation: "5일차 저녁으로 아베노바시 동선. 아베노 하루카스 전망 후 도보 5분.",
+    reservationInfo: { required: false, method: "현장 방문 (테이블 15석 / 빠르게 회전)", website: "https://tabelog.com/kr/osaka/A2701/A270203/27140502/", phone: "06-6551-0088", hours: "11:00 ~ 15:00, 17:00 ~ 23:00", closed: "무휴" }
   }
 ];
 
