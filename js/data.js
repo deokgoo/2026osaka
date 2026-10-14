@@ -22,9 +22,9 @@ export const TRIP_META = {
     phone: "+81-6-6732-8190"
   },
   defaultExchangeRate: 9.15, // 100 JPY = 915 KRW 기준 (1 JPY = 9.15 KRW)
-  lastUpdated: "2026-10-07T10:53:00+09:00",
-  updatedDate: "2026-10-07",
-  updatedTime: "10:53"
+  lastUpdated: "2026-10-14T15:33:00+09:00",
+  updatedDate: "2026-10-14",
+  updatedTime: "15:33"
 };
 
 export const ITINERARY_DAYS = [
