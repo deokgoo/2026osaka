@@ -267,17 +267,17 @@ function renderRestaurantCards() {
                 <h3 class="text-lg font-bold text-white group-hover:text-pink-300 transition-colors">${r.name}</h3>
                 <p class="text-xs text-slate-400 mt-0.5">${r.japaneseName}</p>
               </div>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300 border border-slate-700 whitespace-nowrap">${r.type}</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-xs text-slate-300 border border-slate-700 whitespace-nowrap">${r.category}</span>
             </div>
 
             <div class="space-y-2.5 text-sm">
               <div class="flex items-start gap-2 text-slate-300">
                 <i data-lucide="map-pin" class="w-4 h-4 text-pink-400 mt-0.5 flex-shrink-0"></i>
-                <span>${r.location}</span>
+                <span>${r.address}</span>
               </div>
               <div class="flex items-center gap-2 text-slate-300">
                 <i data-lucide="wallet" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
-                <span>${r.pricePerPerson || r.priceRange || '가격 정보 없음'}</span>
+                <span>${r.priceRange || '가격 정보 없음'}</span>
               </div>
               <div class="flex items-center gap-2 text-slate-300">
                 <i data-lucide="clock" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
@@ -301,7 +301,7 @@ function renderRestaurantCards() {
             ${r.reservationInfo ? `
               <div class="mt-3 flex items-center gap-2 text-xs text-slate-400">
                 <i data-lucide="calendar-check" class="w-3.5 h-3.5 text-purple-400"></i>
-                <span>${r.reservationInfo.methods.join(' · ')}</span>
+                <span>${r.reservationInfo.method}</span>
               </div>
             ` : ''}
           </div>
