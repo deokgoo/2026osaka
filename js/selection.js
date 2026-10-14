@@ -1,7 +1,7 @@
 // Restaurant Selection Page Logic
 // Handles displaying undecided meal slots and restaurant options
 
-import { RESTAURANTS } from './data.js';
+import { GOURMET_RESTAURANTS as RESTAURANTS } from './data.js';
 
 // ─── State ────────────────────────────────────────────────────────────────────
 let selectedRestaurants = {};  // key: "day-mealType" → restaurant id
