@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>식당 선택 — 2026 오사카·교토</title>
+  <meta name="description" content="아직 결정되지 않은 점심·저녁 식당을 선택하고 비교하는 페이지">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              pink: '#f43f5e',
+              rose: '#e11d48',
+              cyan: '#06b6d4',
+              gold: '#f59e0b',
+              dark: '#070913',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="text-slate-100 antialiased selection:bg-pink-500 selection:text-white">
+
+  <!-- 1. Header & Navigation -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white shadow-lg shadow-pink-500/20">
+          <i data-lucide="plane" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <a href="index.html" class="font-display font-black text-lg md:text-xl tracking-tight text-white flex items-center gap-1.5">
+            <span>OSAKA</span>
+            <span class="text-pink-500 font-extrabold">&</span>
+            <span>KYOTO</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-400 border border-pink-500/30 ml-1">2026</span>
+          </a>
+          <p class="text-[10px] text-slate-400 hidden sm:block">식당 선택 페이지</p>
+        </div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-300">
+        <a href="index.html#itinerary" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-4 h-4 text-pink-400"></i>
+          <span>일정표</span>
+        </a>
+        <a href="index.html#gourmet" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="utensils" class="w-4 h-4 text-amber-400"></i>
+          <span>핵심 미식</span>
+        </a>
+        <a href="selection.html" class="px-3.5 py-2 rounded-lg bg-pink-500/20 text-pink-300 border border-pink-500/30 flex items-center gap-1.5">
+          <i data-lucide="hand" class="w-4 h-4 text-pink-400"></i>
+          <span>식당 선택</span>
+        </a>
+        <a href="index.html#transit" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="train" class="w-4 h-4 text-cyan-400"></i>
+          <span>교통 & 패스</span>
+        </a>
+        <a href="index.html#checklist" class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors flex items-center gap-1.5">
+          <i data-lucide="check-square" class="w-4 h-4 text-purple-400"></i>
+          <span>체크리스트</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="md:hidden hidden border-t border-slate-800 bg-slate-950/95 p-4 space-y-2">
+      <a href="index.html#itinerary" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="calendar" class="w-4 h-4 text-pink-400"></i> 일정표
+      </a>
+      <a href="index.html#gourmet" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="utensils" class="w-4 h-4 text-amber-400"></i> 핵심 미식
+      </a>
+      <a href="selection.html" class="block px-3 py-2 rounded-lg text-sm text-pink-300 bg-pink-500/10 border border-pink-500/30 flex items-center gap-2">
+        <i data-lucide="hand" class="w-4 h-4 text-pink-400"></i> 식당 선택
+      </a>
+      <a href="index.html#transit" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="train" class="w-4 h-4 text-cyan-400"></i> 교통 & 패스
+      </a>
+      <a href="index.html#checklist" class="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-slate-800 flex items-center gap-2">
+        <i data-lucide="check-square" class="w-4 h-4 text-purple-400"></i> 체크리스트
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- Hero -->
+    <section class="relative rounded-3xl overflow-hidden glass-panel border border-slate-800/80 p-8 md:p-12">
+      <div class="absolute inset-0 bg-gradient-to-r from-rose-950/40 via-purple-950/30 to-slate-950/60 -z-10"></div>
+      <div class="absolute -right-20 -top-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700 text-xs text-pink-400 font-semibold">
+          <i data-lucide="hand" class="w-3.5 h-3.5"></i>
+          <span>Restaurant Selection</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+          식당 <span class="gradient-text-pink">선택</span> 페이지
+        </h1>
+        <p class="text-slate-300 text-base md:text-lg max-w-2xl">
+          아직 결정되지 않은 점심·저녁 slots에 들어갈 식당을 선택하세요.<br>
+          선택한 식당은 하단 <strong class="text-pink-300">내 선택 요약</strong>에 표시됩니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- Summary Bar -->
+    <section id="selection-summary" class="space-y-4">
+      <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-pink-500/10 border border-pink-500/20">
+        <span class="text-2xl">📋</span>
+        <div>
+          <h3 class="text-sm font-bold text-pink-300">내 선택 요약</h3>
+          <p class="text-xs text-slate-400 mt-0.5">아직 선택하지 않은 slot이 있습니다. 아래 리스트에서 선택하세요.</p>
+        </div>
+      </div>
+      <div id="summary-slots" class="space-y-3">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- Meal Type Filter Tabs -->
+    <section>
+      <div id="filter-tabs" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- Restaurant Cards Grid -->
+    <section id="restaurant-cards" class="space-y-8">
+      <!-- Injected by JS -->
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/80 mt-20 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+        <span class="text-slate-400 font-medium">2026 Osaka & Kyoto — Restaurant Selection</span>
+      </div>
+      <p>© 2026 Osaka Trip Planner. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- App Main Script -->
+  <script type="module" src="js/selection.js"></script>
+</body>
+</html>
