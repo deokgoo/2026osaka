@@ -1,10 +1,10 @@
 // Restaurant Selection Page Logic
 // Handles displaying undecided meal slots and restaurant options
 
-import { GOURMET_RESTAURANTS as RESTAURANTS, GOURMET_RESTAURANTS_EXTRA as RESTAURANTS_EXTRA } from './data.js';
+import { GOURMET_RESTAURANTS as RESTAURANTS, GOURMET_RESTAURANTS_EXTRA as RESTAURANTS_EXTRA, GOURMET_RESTAURANTS_BONUS as RESTAURANTS_BONUS } from './data.js';
 
-// 모든 식당 합치기 (기존 20개 + 신규 10개 = 30개)
-const ALL_RESTAURANTS = [...RESTAURANTS, ...RESTAURANTS_EXTRA];
+// 모든 식당 합치기 (기존 20개 + 1차 10개 + 2차 10개 = 40개)
+const ALL_RESTAURANTS = [...RESTAURANTS, ...RESTAURANTS_EXTRA, ...RESTAURANTS_BONUS];
 
 // ─── State ────────────────────────────────────────────────────────────────────
 let selectedRestaurants = {};  // key: "day-mealType" → restaurant id
