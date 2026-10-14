@@ -1,7 +1,10 @@
 // Restaurant Selection Page Logic
 // Handles displaying undecided meal slots and restaurant options
 
-import { GOURMET_RESTAURANTS as RESTAURANTS } from './data.js';
+import { GOURMET_RESTAURANTS as RESTAURANTS, GOURMET_RESTAURANTS_EXTRA as RESTAURANTS_EXTRA } from './data.js';
+
+// 모든 식당 합치기 (기존 20개 + 신규 10개 = 30개)
+const ALL_RESTAURANTS = [...RESTAURANTS, ...RESTAURANTS_EXTRA];
 
 // ─── State ────────────────────────────────────────────────────────────────────
 let selectedRestaurants = {};  // key: "day-mealType" → restaurant id
@@ -60,7 +63,7 @@ function getMealBadgeIcon(mealType) {
 function getUndecidedSlots() {
   const slots = {};
   
-  RESTAURANTS.forEach(r => {
+  ALL_RESTAURANTS.forEach(r => {
     const key = getMealSlotKey(r.day, r.mealType);
     if (!slots[key]) {
       slots[key] = {
@@ -88,7 +91,7 @@ function getUndecidedSlots() {
 function getSelectedSlots() {
   const selected = {};
   Object.entries(selectedRestaurants).forEach(([key, restaurantId]) => {
-    const restaurant = RESTAURANTS.find(r => r.id === restaurantId);
+    const restaurant = ALL_RESTAURANTS.find(r => r.id === restaurantId);
     if (restaurant) {
       selected[key] = {
         day: restaurant.day,
@@ -245,7 +248,7 @@ function renderRestaurantCards() {
 
       // Show all restaurants for this slot
       slot.restaurantIds.forEach(rid => {
-        const r = RESTAURANTS.find(rest => rest.id === rid);
+        const r = ALL_RESTAURANTS.find(rest => rest.id === rid);
         if (!r) return;
 
         const isSelected = selectedRestaurants[getMealSlotKey(r.day, r.mealType)] === r.id;
