@@ -307,6 +307,14 @@ function renderRestaurantCards() {
                 <span>${r.reservationInfo.method || (Array.isArray(r.reservationInfo.methods) ? r.reservationInfo.methods.join(' · ') : '예약 정보 없음')}</span>
               </div>
             ` : ''}
+
+            ${r.googleMapUrl ? `
+              <a href="${r.googleMapUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="mt-3 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 hover:bg-blue-600/30 hover:border-blue-500/50 transition-all text-sm font-semibold group">
+                <i data-lucide="map" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                <span>구글맵으로 이동</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            ` : ''}
           </div>
         `;
       });
