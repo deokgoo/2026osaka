@@ -22,9 +22,9 @@ export const TRIP_META = {
     phone: "+81-6-6732-8190"
   },
   defaultExchangeRate: 9.15, // 100 JPY = 915 KRW 기준 (1 JPY = 9.15 KRW)
-  lastUpdated: "2026-10-15T08:02:00+09:00",
+  lastUpdated: "2026-10-15T10:00:00+09:00",
   updatedDate: "2026-10-15",
-  updatedTime: "08:02"
+  updatedTime: "10:00"
 };
 
 export const ITINERARY_DAYS = [
@@ -400,7 +400,7 @@ export const GOURMET_RESTAURANTS = [
     reviewsCount: "3,200+",
     priceRange: "8,000 ~ 15,000 JPY (인당)",
     address: "오사카부 오사카시 주오구 난바 1-1-19 (호젠지요코초 골목 안)",
-    googleMapUrl: "https://maps.google.com/?cid=12107619520962549084",
+    googleMapUrl: "https://maps.google.com/?q=松阪牛+ほじん町+道頓堀1-1-19",
     reservationUrl: "https://www.matsusaka-projects.com/",
     reservationRequired: "필수 (특히 할로윈 주말)",
     specialties: ["마츠사카 소고기 특선 부위 6종 모둠", "프리미엄 살치살/안심", "냉면/가마솥밥"],
@@ -428,7 +428,7 @@ export const GOURMET_RESTAURANTS = [
     reviewsCount: "2,100+",
     priceRange: "2,500 ~ 3,800 JPY (인당)",
     address: "교토부 교토시 나카교구 산조도리 가와라마치 히가시이루 나카지마초 73-2",
-    googleMapUrl: "https://www.google.com/maps/search/Gyukatsu+Kyoto+Katsugyu+Sanjo/",
+    googleMapUrl: "https://maps.google.com/?q=牛カツ+京都+勝牛+三条",
     reservationUrl: "",
     reservationRequired: "현장 방문 (회전율 양호)",
     specialties: ["살치살(채끝) 규카츠 정식", "다시계란 & 카레 소스 세트", "1인 미니 화로 셀프 구이"],
@@ -456,7 +456,7 @@ export const GOURMET_RESTAURANTS = [
     reviewsCount: "1,500+",
     priceRange: "6,000 ~ 10,000 JPY (인당)",
     address: "오사카부 오사카시 주오구 난바 3-6-16 케니아빌 1F",
-    googleMapUrl: "https://maps.google.com/?cid=15976576736448166063",
+    googleMapUrl: "https://maps.google.com/?q=すき家+血眼山+難波3-6-16",
     reservationUrl: "https://site.locaop.jp/mIrtf",
     reservationRequired: "사전 예약 필수 (만석 잦음)",
     specialties: ["A5 와규 스키야키 코스 (리브 60g + 채끝 60g)", "신선한 무항생제 유정란 소스", "마무리 우동사리 / 덮밥"],
@@ -484,8 +484,8 @@ export const GOURMET_RESTAURANTS = [
     reviewsCount: "4,500+",
     priceRange: "1,500 ~ 2,500 JPY (인당, 세트 기준)",
     address: "오사카부 오사카시 주오구 도톤보리 1-6-8",
-    googleMapUrl: "https://maps.google.com/?cid=13204320496193831615",
-    reservationUrl: "https://www.kushikatu-daruma.com/location/doutonbori",
+    googleMapUrl: "https://maps.google.com/?q=串かつ+だるま+道頓堀1-6-8",
+    reservationUrl: "https://www.kushikatsu-daruma.com/location/doutonbori",
     reservationRequired: "불필요 (140석 / 회전율 빠름)",
     specialties: ["도톤보리 세트 (쇠고기·새우·치즈·연근 등 10+종)", "도테야키 (소힘줄 된장조림)", "양배추 & 생맥주"],
     description: "1929년 창업한 오사카 쿠시카츠의 원조! 특제 튀김옷으로 겉은 극도로 바삭하고 속은 부드럽습니다. USJ에서 신나게 에너지를 쏟은 후 시원한 생맥주와 함께 즐기는 오사카의 소울푸드입니다.",
@@ -512,7 +512,7 @@ export const GOURMET_RESTAURANTS = [
     reviewsCount: "18,000+",
     priceRange: "2,000 ~ 4,500 JPY (인당)",
     address: "오사카부 오사카시 주오구 니혼바시 2-4-1",
-    googleMapUrl: "https://maps.google.com/?cid=12402117845945925953",
+    googleMapUrl: "https://maps.google.com/?q=黒門市場+日本橋2-4-1",
     reservationUrl: "",
     reservationRequired: "불필요 (자유 방문)",
     specialties: ["통 성게알(우니)", "대왕 가리비 버터구이", "생참치(오도로) 초밥", "킹크랩 다리 구이"],
@@ -540,7 +540,7 @@ export const GOURMET_RESTAURANTS = [
     reviewsCount: "1,800+",
     priceRange: "12,000 ~ 22,000 JPY (인당)",
     address: "오사카부 오사카시 주오구 난바 1-4-6",
-    googleMapUrl: "https://maps.google.com/?cid=648729416635796210",
+    googleMapUrl: "https://maps.google.com/?q=鉄板焼き+陣+難波1-4-6",
     reservationUrl: "https://www.tablecheck.com/",
     reservationRequired: "사전 예약 필수",
     specialties: ["A5 고베규 서로인 & 안심 스테이크", "활 랍스터/전복 철판구이", "특제 마늘 볶음밥"],
@@ -1524,7 +1524,7 @@ export const GOURMET_RESTAURANTS_FINAL = [
     pricePerPerson: "1,000 ~ 1,999 JPY",
     location: "오사카부 오사카시 아베노구 아베노역 직결 아베노 워크 1F",
     address: "大阪府大阪市阿倍野区阿倍野筋1-6-1 ヴィアあべのウォーク 1F 121",
-    googleMapUrl: "https://tabelog.com/kr/osaka/A2701/A270203/27140502/",
+    googleMapUrl: "https://maps.google.com/?q=さかなめし屋+天波+阿倍野",
     reservationUrl: "https://tabelog.com/kr/osaka/A2701/A270203/27140502/",
     reservationRequired: "불필요",
     specialties: ["도미네기 펀치", "와라야키 (짚불 구이)", "모둠 해산물"],
