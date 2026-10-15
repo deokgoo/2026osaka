@@ -575,7 +575,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["오코노미야끼(우천 포함) ¥2,800~4,200", "오코노미야끼(채소 포함) ¥2,200", "카기아게 치킨 ¥1,200"],
     pricePerPerson: "인당 ¥2,500~4,500 (약 ₩25,000~45,000)",
     waiting: "점심/저녁 피크(5:30~7:30PM) 20~30분 대기, 오후 2~4시 사이는 0~10분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 서쪽 출구 → 미스지쥬 2-초메 방면 도보 5분 → Hirota"
+    walkFromHotel: "HOTEL AMANEK → 난바역 서쪽 출구 → 미스지쥬 2-초메 방면 도보 5분 → Hirota",
+    googleMapUrl: "https://maps.google.com/?q=広島屋+大衆酒場+Hirota+道頓堀"
   },
   {
     id: "takoyaki-takoyaki15",
@@ -594,7 +595,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["타코야키 16구 세트 ¥850~950", "카라아게 치킨 ¥700", "사케(국산·잔) ¥600~900"],
     pricePerPerson: "인당 ¥700~1,200 (약 ₩7,000~12,000)",
     waiting: "피크(11:30~13:00 / 5:30~7:30PM) 15~20분, 그 외 0~10분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 니시키_market 방면 도보 6분 → 15"
+    walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 니시키_market 방면 도보 6분 → 15",
+    googleMapUrl: "https://maps.google.com/?q=たこ焼き+15+日本橋2-3-22"
   },
   {
     id: "izakaya-urannamba",
@@ -613,7 +615,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["야키토리(닭꼬치) 3병 ¥1,050~1,350", "아게하미(소고기 양지) ¥1,200", "사시미 플레이트 ¥1,800"],
     pricePerPerson: "인당 ¥3,500~5,000 (약 ₩35,000~50,000)",
     waiting: "저녁 18:00~21:00 10~15분 대기(바 좌석 즉시 가능)",
-    walkFromHotel: "HOTEL AMANEK → 난바역 서측 출구 → 우라난바 대로변 도보 10분 → 이자카야"
+    walkFromHotel: "HOTEL AMANEK → 난바역 서측 출구 → 우라난바 대로변 도보 10분 → 이자카야",
+    googleMapUrl: "https://maps.google.com/?q=大衆酒場+うらなんば+難波"
   },
   {
     id: "sushidan-sushidan",
@@ -632,7 +635,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["스시 세트(10점) ¥4,500~6,500", "사시미 플레이트 ¥1,500~1,800"],
     pricePerPerson: "인당 ¥4,000~7,000 (약 ₩40,000~70,000)",
     waiting: "피크 15~20분, 그 외 0~10분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 슥스나시장 방면 도보 8분 → 스시 단"
+    walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 슥스나시장 방면 도보 8분 → 스시 단",
+    googleMapUrl: "https://maps.google.com/?q=すし堂+日本橋2-4-9"
   },
   {
     id: "matcha-gion",
@@ -651,7 +655,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["매차 라떼 ¥800", "과일 다후쿠(당일) ¥1,000~1,200", "호지차 ¥600"],
     pricePerPerson: "인당 ¥2,000~4,000 (약 ₩20,000~40,000)",
     waiting: "오전 10:00~12:00 또는 오후 14:00~16:00 0~10분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 기온역(지하철 5분) → 도보 12분 → 매차 카페"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 기온역(지하철 5분) → 도보 12분 → 매차 카페",
+    googleMapUrl: "https://maps.google.com/?q=祇園+抹茶カフェ+京都"
   },
   {
     id: "shojin-fushiminariai",
@@ -670,7 +675,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["정진요리 세트(8코스) ¥4,500~6,500", "미타라시 단고 ¥800", "매차 라떼(식물유) ¥700"],
     pricePerPerson: "인당 ¥4,000~7,000 (약 ₩40,000~70,000)",
     waiting: "점심 11:30~13:30 또는 오후 14:00~15:30 15~30분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 이나리역(교토모노레일 15분) → 도보 30분 → 정진요리"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 이나리역(교토모노레일 15분) → 도보 30분 → 정진요리",
+    googleMapUrl: "https://maps.google.com/?q=伏見稲荷+精進料理+京都市中京区"
   },
   {
     id: "inari-perfect",
@@ -689,7 +695,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["이나리 파블로바 ¥1,400", "매차 라떼 ¥800", "매차 소프트서브 ¥500"],
     pricePerPerson: "인당 ¥1,500~3,000 (약 ₩15,000~30,000)",
     waiting: "10:00~14:00 또는 14:00~16:00 0~10분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 이나리역(교토모노레일 15분) → 도보 10분 → 카페"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 이나리역(교토모노레일 15분) → 도보 10분 → 카페",
+    googleMapUrl: "https://maps.google.com/?q=伏見稲荷+パフェ+京都市中京区"
   },
   {
     id: "kaiseki-ninenjo",
@@ -709,7 +716,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["경량 카이세키(8코스) ¥8,000~10,000", "템푸라 플레이트 ¥2,500", "사시미(당일) ¥1,500"],
     pricePerPerson: "인당 ¥6,000~10,000 (약 ₩60,000~100,000)",
     waiting: "저녁 17:30~19:00 20~40분(예약 시 즉시 가능)",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 니닌조역(지하철 10분) → 도보 10분 → 카이세키"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 교토역(특급 50분) → 니닌조역(지하철 10분) → 도보 10분 → 카이세키",
+    googleMapUrl: "https://maps.google.com/?q=二条城+懐石料理+京都市中京区"
   },
   {
     id: "okonomiyaki-namba2",
@@ -728,7 +736,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["오코노미야끼(우천) ¥2,800~4,200", "오코노미야끼(채소) ¥2,200", "카기아게 치킨 ¥1,200"],
     pricePerPerson: "인당 ¥2,500~4,500 (약 ₩25,000~45,000)",
     waiting: "피크(5:30~7:30PM) 20~30분, 그 외 0~15분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 서측 출구 → 미스지쥬 1-초메 도보 4분 → 오코노미야끼 2"
+    walkFromHotel: "HOTEL AMANEK → 난바역 서측 출구 → 미스지쥬 1-초메 도보 4분 → 오코노미야끼 2",
+    googleMapUrl: "https://maps.google.com/?q=難巴+お好み焼き+2+道頓堀"
   },
   {
     id: "sashi-dotonbori",
@@ -747,7 +756,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["스시 세트(10점) ¥4,500~6,500", "사시미 플레이트 ¥1,800"],
     pricePerPerson: "인당 ¥4,000~7,000 (약 ₩40,000~70,000)",
     waiting: "피크 15~20분, 그 외 0~10분",
-    walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 도톤보리 방면 도보 8분 → 스시"
+    walkFromHotel: "HOTEL AMANEK → 난바역 동측 출구 → 도톤보리 방면 도보 8분 → 스시",
+    googleMapUrl: "https://maps.google.com/?q=桃太郎+寿司+道頓堀"
   },
   {
     id: "yakiniku-farewell",
@@ -766,7 +776,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["와규 야키킥 세트 ¥5,000~8,000", "템푸라 ¥800", "사케(국산·잔) ¥700~1,200"],
     pricePerPerson: "인당 ¥5,000~9,000 (약 ₩50,000~90,000)",
     waiting: "저녁 18:00~20:00 15~30분, 예약 시 즉시 가능",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 신사이바시 방면 도보 10분 → 와규 야키킥"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 신사이바시 방면 도보 10분 → 와규 야키킥",
+    googleMapUrl: "https://maps.google.com/?q=ワギュ+焼肉+難波"
   },
   {
     id: "okonomiyaki-ajinoya",
@@ -785,7 +796,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["오코노미야끼 ¥1,500~2,000/장", "야키소바 ¥1,200~1,500", "카기아게 ¥1,000"],
     priceRange: "인당 ¥2,000~3,000",
     waiting: "저녁 피크 30~60분, 평일 낮 10분 이내",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 도톤보리 가와자키 다리 인근"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 도톤보리 가와자키 다리 인근",
+    googleMapUrl: "https://maps.google.com/?q=あじのや+本店+道頓堀"
   },
   {
     id: "takoyaki-ootako",
@@ -804,7 +816,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["타코야끼 6개 ¥720", "타코야끼 10개 ¥1,200", "다시·계란 추가 무료"],
     priceRange: "인당 ¥700~1,500",
     waiting: "저녁 15~25분, 오전은 거의 없음",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 도톤보리 메인 거리 걸어서 5분"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 도톤보리 메인 거리 걸어서 5분",
+    googleMapUrl: "https://maps.google.com/?q=本家+大たこ+道頓堀"
   },
   {
     id: "okonomiyaki-dohtonbori",
@@ -823,7 +836,8 @@ export const GOURMET_RESTAURANTS = [
     specialties: ["오코노미야끼 ¥800~1,500/장", "몽야야키 ¥700~1,200", "라멘 ¥800~1,000"],
     priceRange: "인당 ¥1,500~2,500 (자율 코스)",
     waiting: "저녁 20~40분, 피크 시간대 제외 시 10분 이내",
-    walkFromHotel: "HOTEL AMANEK → 난바역 → 오사카 성전철 난바역 도보 3분"
+    walkFromHotel: "HOTEL AMANEK → 난바역 → 오사카 성전철 난바역 도보 3분",
+    googleMapUrl: "https://maps.google.com/?q=道とん堀+大阪本店"
   }
 ];
 
